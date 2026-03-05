@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIVA Assessoria Ambiental — Proposta Técnica (PV09/2026)</title>
+  <style>
+    :root{
+      --blue:#062a5e;
+      --blue-dark:#021B3A;
+      --blue-mid:#0b3a75;
+      --bg:#f6f8fb;
+      --line:#d7dde6;
+      --text:#0d1b2a;
+      --muted:#4a5a70;
+      --card:#ffffff;
+      --shadow: 0 10px 30px rgba(2,27,58,.08);
+      --radius: 14px;
+      --radius-lg: 18px;
+      --max: 1180px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
+    }
+    a{ color:inherit; text-decoration:none; }
+    .container{ width:min(var(--max), calc(100% - 32px)); margin:0 auto; }
+
+    /* Header */
+    header{
+      position:fixed;
+      top:0; left:0; right:0;
+      background:rgba(246,248,251,.86);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+      z-index:1000;
+    }
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:12px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 260px;
+    }
+    .brand img{
+      width:34px; height:34px;
+      border-radius:10px;
+      box-shadow: 0 6px 18px rgba(2,27,58,.18);
+      background:#fff;
+      object-fit:contain;
+    }
+    .brand .title{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+    .brand .title strong{
+      font-size:14px;
+      letter-spacing:.2px;
+      color:var(--blue-dark);
+    }
+    .brand .title span{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:2px;
+    }
+
+    .top-actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .btn{
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--blue-dark);
+      padding:10px 12px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:600;
+      font-size:13px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      box-shadow: 0 10px 24px rgba(2,27,58,.06);
+      transition:.2s ease;
+      user-select:none;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 14px 30px rgba(2,27,58,.10); }
+    .btn:active{ transform: translateY(0px); box-shadow: 0 10px 24px rgba(2,27,58,.06); }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--blue), var(--blue-mid));
+      color:#fff;
+      border-color: rgba(255,255,255,.22);
+    }
+    .chip{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid var(--line);
+      background:#fff;
+      padding:8px 10px;
+      border-radius:999px;
+    }
+
+    /* Top nav (compact) */
+    nav.topnav{
+      display:none;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:center;
+      padding:0 0 12px 0;
+    }
+    nav.topnav a{
+      font-size:12px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+      color:var(--muted);
+      background:rgba(255,255,255,.65);
+    }
+    nav.topnav a.active{
+      color:var(--blue-dark);
+      border-color: var(--line);
+      background:#fff;
+      box-shadow: 0 10px 24px rgba(2,27,58,.06);
+    }
+
+    /* Main spacing below header */
+    .spacer{ height:76px; }
+
+    /* Hero */
+    .hero{
+      padding:28px 0 18px 0;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.6fr .9fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .hero h1{
+      margin:0 0 8px 0;
+      font-size:30px;
+      letter-spacing:-.6px;
+      color:var(--blue-dark);
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      max-width: 72ch;
+    }
+    .hero .meta{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius-lg);
+      box-shadow:var(--shadow);
+    }
+    .hero-card{
+      padding:16px 16px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      background: radial-gradient(900px 380px at 20% 0%, rgba(11,58,117,.12), transparent 60%),
+                  radial-gradient(900px 380px at 110% 20%, rgba(6,42,94,.12), transparent 60%),
+                  #fff;
+    }
+    .hero-card .k{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 12px;
+      border:1px dashed rgba(215,221,230,.9);
+      border-radius:14px;
+      background: rgba(246,248,251,.75);
+    }
+    .hero-card .k b{ color:var(--blue-dark); font-size:12px; }
+    .hero-card .k span{ color:var(--muted); font-size:12px; text-align:right; }
+
+    /* Content layout */
+    .content{
+      padding:12px 0 36px 0;
+    }
+    .layout{
+      display:grid;
+      grid-template-columns: 290px 1fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    /* Left index */
+    .side{
+      position:sticky;
+      top:92px;
+      align-self:start;
+    }
+    .side .side-inner{
+      padding:14px;
+    }
+    .side h3{
+      margin:0 0 10px 0;
+      font-size:12px;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .toc{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .toc a{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding:10px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+      color:var(--muted);
+      background: rgba(246,248,251,.7);
+      transition:.15s ease;
+    }
+    .toc a:hover{
+      background:#fff;
+      border-color: var(--line);
+      color:var(--blue-dark);
+    }
+    .toc a.active{
+      background: linear-gradient(135deg, rgba(6,42,94,.10), rgba(11,58,117,.08));
+      border-color: rgba(6,42,94,.22);
+      color:var(--blue-dark);
+    }
+    .toc .dot{
+      width:10px; height:10px;
+      border-radius:999px;
+      border:2px solid rgba(6,42,94,.28);
+      margin-top:4px;
+      flex:0 0 auto;
+    }
+    .toc a.active .dot{
+      border-color: rgba(6,42,94,.75);
+      background: rgba(6,42,94,.12);
+    }
+
+    /* Right sections */
+    .stack{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    section.card{
+      padding:18px 18px;
+      scroll-margin-top: 96px;
+    }
+    section.card h2{
+      margin:0 0 10px 0;
+      font-size:18px;
+      letter-spacing:-.2px;
+      color:var(--blue-dark);
+    }
+    section.card p{
+      margin:0 0 10px 0;
+      color:var(--text);
+    }
+    .muted{ color:var(--muted); }
+    ul{
+      margin:10px 0 0 20px;
+      padding:0;
+      color:var(--text);
+    }
+    li{ margin:6px 0; }
+    .grid-2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:10px;
+    }
+    .mini{
+      padding:12px 12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: rgba(246,248,251,.65);
+    }
+    .mini b{ display:block; font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.7px; margin-bottom:6px;}
+    .mini span{ display:block; color:var(--blue-dark); font-weight:700; }
+
+    /* Table */
+    .table-wrap{
+      width:100%;
+      overflow:auto;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+    }
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      min-width: 780px;
+    }
+    thead th{
+      position:sticky;
+      top:0;
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      color:#fff;
+      font-size:12px;
+      letter-spacing:.6px;
+      text-transform:uppercase;
+      padding:12px 12px;
+      text-align:left;
+      border-bottom:1px solid rgba(255,255,255,.18);
+      white-space:nowrap;
+    }
+    tbody td{
+      padding:12px 12px;
+      border-bottom:1px solid var(--line);
+      color:var(--text);
+      font-size:14px;
+      vertical-align:top;
+      background:#fff;
+    }
+    tbody tr:nth-child(even) td{ background: rgba(246,248,251,.75); }
+    tbody tr:last-child td{ border-bottom:none; }
+
+    /* Highlight block for "Principais fundamentos técnicos" */
+    .highlight{
+      border:1px solid rgba(6,42,94,.20);
+      background: radial-gradient(900px 380px at 15% 0%, rgba(11,58,117,.14), transparent 55%),
+                  radial-gradient(900px 380px at 110% 20%, rgba(6,42,94,.12), transparent 60%),
+                  #ffffff;
+      border-radius: 18px;
+      padding:16px 16px;
+      box-shadow: 0 18px 44px rgba(2,27,58,.10);
+    }
+    .highlight h3{
+      margin:0 0 8px 0;
+      color:var(--blue-dark);
+      font-size:16px;
+      letter-spacing:-.2px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:700;
+      color:#fff;
+      background: linear-gradient(135deg, var(--blue), var(--blue-mid));
+      border-radius:999px;
+      padding:8px 10px;
+      font-size:12px;
+      border:1px solid rgba(255,255,255,.22);
+      box-shadow: 0 12px 26px rgba(2,27,58,.10);
+      margin-bottom:10px;
+    }
+    .divider{
+      height:1px;
+      background: var(--line);
+      margin:14px 0 10px 0;
+    }
+
+    /* Footer */
+    footer{
+      border-top:1px solid var(--line);
+      padding:18px 0 28px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .foot{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns:1fr; }
+      .layout{ grid-template-columns:1fr; }
+      .side{ position:relative; top:auto; }
+      nav.topnav{ display:flex; }
+    }
+    @media (max-width: 520px){
+      .hero h1{ font-size:24px; }
+      section.card{ padding:16px; }
+      .brand{ min-width: unset; }
+      .btn{ padding:10px 10px; }
+      .grid-2{ grid-template-columns: 1fr; }
+    }
+
+    /* Print (A4) */
+    @media print{
+      :root{
+        --bg:#ffffff;
+        --shadow: none;
+      }
+      header, nav.topnav, .side, .top-actions .chip{ display:none !important; }
+      .spacer{ height:0 !important; }
+      body{ background:#fff; }
+      .container{ width: 100%; margin:0; }
+      .hero{ padding: 0 0 10px 0; }
+      .layout{ display:block; }
+      section.card{
+        break-inside: avoid;
+        box-shadow:none;
+        border:1px solid #d7dde6;
+      }
+      .card{ box-shadow:none; }
+      a{ text-decoration:none; }
+      table{ min-width: unset; }
+      thead th{ position:static; }
+      .table-wrap{ overflow:visible; }
+      @page{
+        size: A4;
+        margin: 14mm 12mm;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="brand">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJjAq1Am1YNrIjCL2db3B53K645Uf9N0z9Kw&s"
+            alt="Logo VIVA"
+          />
+          <div class="title">
+            <strong>VIVA Assessoria Ambiental</strong>
+            <span>Apresentação técnica</span>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <span class="chip">PV09/2026 • Proposta Comercial</span>
+          <button class="btn primary" id="btnPdf" title="Exportar para PDF (impressão A4)">
+            Exportar para PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- Top nav aparece no mobile/tablet -->
+      <nav class="topnav" id="topnav">
+        <a href="#identificacao">Identificação</a>
+        <a href="#quem-somos">Quem somos</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#coordenacao">Coordenação</a>
+        <a href="#objeto">Objeto</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#investimento">Investimento</a>
+        <a href="#condicoes">Condições</a>
+        <a href="#fundamentos">Fundamentos</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="spacer"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="card" style="padding:18px 18px;">
+            <h1>Gestão Ambiental da Obra — Implantação do Empreendimento em Cabeçudas (LAI 12290/2025)</h1>
+            <p>
+              Documento técnico em formato de apresentação, estruturado para leitura rápida e
+              tomada de decisão. Reúne o escopo dos programas, rotinas de controle, entregáveis,
+              periodicidades e condições gerais, com foco em conformidade, rastreabilidade e previsibilidade.
+            </p>
+
+            <div class="meta">
+              <span class="chip">Localização: São Joaquim/SC</span>
+              <span class="chip">Data: 26 de janeiro de 2026</span>
+              <span class="chip">Cliente: PROCAVE</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <p class="muted" style="margin:0;">
+              Estrutura do documento: índice navegável, seções em cards, scroll spy e exportação para PDF em A4.
+            </p>
+          </div>
+
+          <aside class="card hero-card">
+            <div class="k"><b>Proposta</b><span>PV09/2026</span></div>
+            <div class="k"><b>Instrumentos</b><span>LAI + AUC + Programas Ambientais</span></div>
+            <div class="k"><b>Foco</b><span>Implementação, monitoramento e comprovação</span></div>
+            <div class="k"><b>Formato</b><span>Vistorias + Relatórios + Organização documental</span></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        <div class="layout">
+          <!-- Left: index -->
+          <aside class="side">
+            <div class="card side-inner">
+              <h3>Índice</h3>
+              <ul class="toc" id="toc">
+                <li><a href="#identificacao"><span class="dot"></span><span>1. Identificação</span></a></li>
+                <li><a href="#quem-somos"><span class="dot"></span><span>2. Quem somos</span></a></li>
+                <li><a href="#clientes"><span class="dot"></span><span>3. Clientes</span></a></li>
+                <li><a href="#coordenacao"><span class="dot"></span><span>4. Coordenação técnica</span></a></li>
+                <li><a href="#objeto"><span class="dot"></span><span>5. Objeto</span></a></li>
+                <li><a href="#pgrcc"><span class="dot"></span><span>6.1 PGRCC e treinamentos</span></a></li>
+                <li><a href="#erosao"><span class="dot"></span><span>6.2 Controle de processos erosivos</span></a></li>
+                <li><a href="#emissoes"><span class="dot"></span><span>6.3 Emissões atmosféricas e qualidade do ar</span></a></li>
+                <li><a href="#ruidos"><span class="dot"></span><span>6.4 Monitoramento de ruídos</span></a></li>
+                <li><a href="#supressao"><span class="dot"></span><span>6.5 Supressão vegetal (AUC)</span></a></li>
+                <li><a href="#assessoria"><span class="dot"></span><span>6.6 Assessoria, consultoria e dossiê LAO</span></a></li>
+                <li><a href="#investimento"><span class="dot"></span><span>7. Investimento</span></a></li>
+                <li><a href="#condicoes"><span class="dot"></span><span>8. Condições</span></a></li>
+                <li><a href="#fundamentos"><span class="dot"></span><span>9. Principais fundamentos técnicos</span></a></li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- Right: content -->
+          <div class="stack">
+            <section class="card" id="identificacao" data-title="Identificação">
+              <h2>1. Identificação</h2>
+              <div class="grid-2">
+                <div class="mini"><b>Documento</b><span>Proposta Comercial — PV09/2026</span></div>
+                <div class="mini"><b>Data</b><span>26 de janeiro de 2026</span></div>
+                <div class="mini"><b>Empreendimento</b><span>Implantação do Empreendimento em Cabeçudas</span></div>
+                <div class="mini"><b>Referência</b><span>LAI 12290/2025</span></div>
+              </div>
+              <p class="muted" style="margin-top:12px;">
+                Esta apresentação consolida o escopo de gestão ambiental durante a implantação, alinhado às condicionantes da LAI, à Autorização de Corte (AUC) e aos programas ambientais aplicáveis.
+              </p>
+            </section>
+
+            <section class="card" id="quem-somos" data-title="Quem somos">
+              <h2>2. Quem somos</h2>
+              <p>
+                A VIVA existe para viabilizar empreendimentos com segurança ambiental e previsibilidade operacional.
+                Atuamos como extensão do departamento ambiental do empreendedor, com foco em conformidade,
+                rastreabilidade documental e estratégia para evitar surpresas e burocracia imprevisível.
+              </p>
+              <div class="grid-2">
+                <div class="mini"><b>Propósito</b><span>Viabilizar empreendimentos</span></div>
+                <div class="mini"><b>Missão</b><span>Ser o departamento ambiental de projetos complexos</span></div>
+              </div>
+              <div class="mini" style="margin-top:12px;">
+                <b>Visão</b>
+                <span style="font-weight:700;">Viabilizar R$ 100 bilhões em VGV até 2035</span>
+                <div class="muted" style="margin-top:6px;">com desenvolvimento sustentável aplicado na prática, com técnica, legislação e organização.</div>
+              </div>
+            </section>
+
+            <section class="card" id="clientes" data-title="Clientes">
+              <h2>3. Clientes</h2>
+              <p class="muted">
+                Atuação recorrente em empreendimentos imobiliários e obras com alta exigência de controle, evidências e previsibilidade.
+              </p>
+              <ul>
+                <li>Portfólio com incorporadoras, construtoras, grupos empresariais e operações com exigência técnica elevada.</li>
+                <li>Experiência em rotina de obra, controle de condicionantes, gestão documental e interface com órgão licenciador.</li>
+              </ul>
+            </section>
+
+            <section class="card" id="coordenacao" data-title="Coordenação técnica">
+              <h2>4. Coordenação técnica</h2>
+              <p><strong>Victor Valente Silvestre</strong></p>
+              <ul>
+                <li>Doutorando/Pesquisador em Avaliação de Impactos Ambientais (UFSC).</li>
+                <li>Mestre em Engenharia Ambiental e Engenheiro Sanitarista e Ambiental (UFSC).</li>
+                <li>15 anos de experiência profissional em licenciamento ambiental, com histórico de mais de 1.700 processos.</li>
+                <li>Experiência em gestão pública e saneamento (incluindo funções executivas).</li>
+                <li>Formação complementar internacional em gestão de resíduos e políticas ambientais.</li>
+              </ul>
+              <p class="muted" style="margin-top:10px;">
+                Todos os documentos técnicos serão acompanhados das respectivas ARTs.
+              </p>
+            </section>
+
+            <section class="card" id="objeto" data-title="Objeto">
+              <h2>5. Objeto</h2>
+              <p>
+                Execução integral dos programas ambientais, controles operacionais e condicionantes estabelecidos na Licença Ambiental de Instalação (LAI),
+                na Autorização de Corte (AUC) e nos respectivos planos e programas ambientais do empreendimento,
+                visando a implementação, o monitoramento e a comprovação de conformidade durante a fase de implantação.
+              </p>
+              <ul>
+                <li>Vistorias técnicas periódicas no canteiro de obras e gestão ambiental contínua.</li>
+                <li>Gestão do PGRCC, monitoramento de processos erosivos, emissões atmosféricas, qualidade do ar e ruídos.</li>
+                <li>Treinamentos operacionais da equipe de obra com registros.</li>
+                <li>Acompanhamento da supressão vegetal autorizada e organização documental comprobatória.</li>
+                <li>Elaboração de relatórios técnicos periódicos e documentos exigidos pelo órgão ambiental.</li>
+              </ul>
+            </section>
+
+            <section class="card" id="servicos" data-title="Serviços (visão geral)">
+              <h2>6. Serviços contemplados</h2>
+              <p class="muted">
+                A seguir, os serviços são apresentados em seções específicas com descrição, atividades principais, entregáveis, periodicidade e vigência.
+              </p>
+              <div class="grid-2">
+                <div class="mini"><b>Rotina</b><span>Vistorias + registros + relatórios</span></div>
+                <div class="mini"><b>Gestão</b><span>Interface com fornecedores e órgão ambiental</span></div>
+              </div>
+            </section>
+
+            <section class="card" id="pgrcc" data-title="PGRCC e treinamentos">
+              <h2>6.1 Relatório de execução do PGRCC e treinamentos em obra</h2>
+              <p>
+                Implantação, acompanhamento e comprovação da execução do PGRCC no canteiro, assegurando triagem, acondicionamento,
+                armazenamento temporário, transporte e destinação final ambientalmente adequada, em conformidade com a Resolução CONAMA 307/2002,
+                PNRS e condicionantes da licença.
+              </p>
+              <p><strong>Atividades principais</strong></p>
+              <ul>
+                <li>Vistoria mensal no canteiro para verificação de baias, caçambas e segregação por classe.</li>
+                <li>Conferência de volumes gerados e rastreabilidade (CTR/MTR, notas fiscais, licenças de transportadores e destinadores).</li>
+                <li>Orientação prática à equipe quanto à segregação, acondicionamento e prevenção de contaminação cruzada.</li>
+                <li>Treinamento semestral in loco com registros de presença e fotos.</li>
+                <li>Atualização de planilhas de controle e indicadores de geração.</li>
+              </ul>
+              <p><strong>Entregáveis</strong></p>
+              <ul>
+                <li>Relatório técnico semestral consolidado do PGRCC (registros fotográficos, quantitativos, comprovantes e não conformidades).</li>
+                <li>Registros de treinamento e listas de presença.</li>
+              </ul>
+              <div class="grid-2">
+                <div class="mini"><b>Periodicidade</b><span>Visita mensal • Relatório semestral</span></div>
+                <div class="mini"><b>Vigência</b><span>Durante todo o período de obra</span></div>
+              </div>
+            </section>
+
+            <section class="card" id="erosao" data-title="Controle de processos erosivos">
+              <h2>6.2 Relatório de execução do programa de controle de processos erosivos</h2>
+              <p>
+                Serviço voltado à prevenção, mitigação e correção de processos erosivos durante a terraplanagem, protegendo o solo,
+                drenagens e áreas adjacentes.
+              </p>
+              <p><strong>Atividades principais</strong></p>
+              <ul>
+                <li>Inspeções mensais das frentes de terraplanagem e taludes.</li>
+                <li>Vistorias adicionais após eventos de chuva intensa.</li>
+                <li>Verificação de dispositivos de controle (valetas, sarjetas, caixas de contenção, bacias de sedimentação, enrocamentos, biomantas, revegetação).</li>
+                <li>Recomendações corretivas imediatas e registros fotográficos georreferenciados.</li>
+              </ul>
+              <p><strong>Entregável</strong></p>
+              <ul>
+                <li>Relatório mensal de controle erosivo com diagnóstico, evidências e plano de ação.</li>
+              </ul>
+              <div class="grid-2">
+                <div class="mini"><b>Periodicidade</b><span>Visita mensal + pós-chuva • Relatório mensal</span></div>
+                <div class="mini"><b>Vigência</b><span>Apenas durante a fase de terraplanagem</span></div>
+              </div>
+            </section>
+
+            <section class="card" id="emissoes" data-title="Emissões atmosféricas e qualidade do ar">
+              <h2>6.3 Relatório e execução do programa de monitoramento das emissões atmosféricas e qualidade do ar</h2>
+              <p>
+                Acompanhamento das emissões de material particulado e poeira geradas pelas atividades construtivas,
+                assegurando conformidade com padrões ambientais e minimizando impactos à vizinhança.
+              </p>
+              <p><strong>Atividades principais</strong></p>
+              <ul>
+                <li>Vistorias trimestrais no canteiro.</li>
+                <li>Avaliação de fontes emissoras (escavações, transporte interno, vias não pavimentadas, armazenamento de materiais).</li>
+                <li>Verificação de medidas mitigadoras (umidificação, cobertura de cargas, lavagem de rodas, barreiras físicas).</li>
+                <li>Registros de condições meteorológicas e recomendações operacionais preventivas.</li>
+              </ul>
+              <p><strong>Entregável</strong></p>
+              <ul>
+                <li>Relatório técnico semestral com registros fotográficos, análise qualitativa e medidas implementadas.</li>
+              </ul>
+              <div class="grid-2">
+                <div class="mini"><b>Periodicidade</b><span>Vistoria trimestral • Relatório semestral</span></div>
+                <div class="mini"><b>Vigência</b><span>Durante todo o período de obra</span></div>
+              </div>
+            </section>
+
+            <section class="card" id="ruidos" data-title="Monitoramento de ruídos">
+              <h2>6.4 Relatório e execução do programa de monitoramento de ruídos</h2>
+              <p>
+                Controle das emissões sonoras provenientes de máquinas, equipamentos e atividades construtivas,
+                visando proteger trabalhadores e comunidade do entorno.
+              </p>
+              <p><strong>Atividades principais</strong></p>
+              <ul>
+                <li>Vistorias mensais no canteiro.</li>
+                <li>Medições trimestrais de pressão sonora com equipamento calibrado.</li>
+                <li>Avaliação de horários de operação e fontes críticas.</li>
+                <li>Recomendações de mitigação (barreiras, manutenção, reorganização de cronograma) com registros de campo.</li>
+              </ul>
+              <p><strong>Entregável</strong></p>
+              <ul>
+                <li>Relatório trimestral com resultados, comparação normativa e plano de ação.</li>
+              </ul>
+              <div class="grid-2">
+                <div class="mini"><b>Periodicidade</b><span>Vistoria mensal • Relatório trimestral</span></div>
+                <div class="mini"><b>Vigência</b><span>Durante todo o período de obra</span></div>
+              </div>
+            </section>
+
+            <section class="card" id="supressao" data-title="Supressão vegetal (AUC)">
+              <h2>6.5 Acompanhamento técnico da supressão vegetal (AUC)</h2>
+              <p>
+                Acompanhamento integral das atividades de supressão vegetal autorizadas, assegurando estrita conformidade com limites,
+                volumetria e condicionantes da Autorização de Corte.
+              </p>
+              <p><strong>Atividades principais</strong></p>
+              <ul>
+                <li>Presença técnica durante a supressão.</li>
+                <li>Conferência de área, espécies e quantitativos autorizados.</li>
+                <li>Registro fotográfico e georreferenciado.</li>
+                <li>Orientação quanto ao DOF, transporte e destinação do material lenhoso.</li>
+                <li>Controle para evitar supressões fora da área licenciada.</li>
+                <li>Consolidação de registros e comprovações (destinação do material e medidas compensatórias).</li>
+                <li>Organização documental para protocolo junto ao órgão ambiental.</li>
+              </ul>
+              <p><strong>Entregável</strong></p>
+              <ul>
+                <li>Relatório de acompanhamento da supressão com evidências técnicas.</li>
+              </ul>
+              <div class="grid-2">
+                <div class="mini"><b>Periodicidade</b><span>Durante as atividades de corte</span></div>
+                <div class="mini"><b>Vigência</b><span>Durante a execução da supressão</span></div>
+              </div>
+            </section>
+
+            <section class="card" id="assessoria" data-title="Assessoria, consultoria e dossiê LAO">
+              <h2>6.6 Assessoria, consultoria ambiental e organização documental para LAO</h2>
+              <p>
+                Assessoramento técnico contínuo ao empreendedor, com atuação estratégica para garantir o cumprimento integral das condicionantes
+                da LAI, da AUC e dos Programas Ambientais, funcionando como extensão do departamento ambiental do empreendimento durante toda a fase de obra.
+              </p>
+              <p>
+                Contempla planejamento, coordenação, acompanhamento técnico e interface com fornecedores, projetistas, laboratórios, transportadores
+                e órgão ambiental, assegurando conformidade legal, rastreabilidade documental, previsibilidade operacional e organização sistemática das evidências
+                necessárias à futura obtenção da Licença Ambiental de Operação (LAO).
+              </p>
+              <p><strong>Atividades principais</strong></p>
+              <ul>
+                <li>Interlocução técnica com o órgão ambiental (notificações, reuniões e diligências).</li>
+                <li>Cotação, análise comparativa e apoio técnico na seleção de fornecedores licenciados.</li>
+                <li>Conferência de licenças, ARTs e documentos legais de fornecedores.</li>
+                <li>Interface entre cliente, fornecedores e órgão ambiental.</li>
+                <li>Consolidação de evidências técnicas (fotos, relatórios, certificados, MTR/CTR, notas fiscais, ARTs, laudos e comprovações).</li>
+                <li>Organização, padronização e arquivamento do dossiê ambiental para instrução do pedido de LAO.</li>
+                <li>Apoio técnico na preparação de respostas a exigências, protocolos e complementações documentais.</li>
+              </ul>
+            </section>
+
+            <section class="card" id="investimento" data-title="Investimento">
+              <h2>7. Investimento</h2>
+              <p class="muted">As medições ocorrerão a cada relatório, conforme periodicidade estabelecida nos programas.</p>
+
+              <div class="table-wrap" style="margin-top:12px;">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Produtos contemplados</th>
+                      <th>Vistoria</th>
+                      <th>Relatório</th>
+                      <th>Valores unitários</th>
+                      <th>Contratação integral</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Relatório de execução do PGRCC e treinamentos em obra</strong></td>
+                      <td>Mensal</td>
+                      <td>Semestral</td>
+                      <td>R$ 11.520,00</td>
+                      <td><strong>R$ 7.200</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Relatório de execução do programa de controle de processos erosivos</strong></td>
+                      <td>Mensal</td>
+                      <td>Mensal</td>
+                      <td>R$ 1.920,00</td>
+                      <td><strong>R$ 1.200</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Relatório e execução do programa de monitoramento das emissões atmosféricas e qualidade do ar</strong></td>
+                      <td>Trimestral</td>
+                      <td>Semestral</td>
+                      <td>R$ 3.840,00</td>
+                      <td><strong>R$ 2.400</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Relatório e execução do programa de monitoramento de ruídos</strong></td>
+                      <td>Mensal</td>
+                      <td>Trimestral</td>
+                      <td>R$ 5.760,00</td>
+                      <td><strong>R$ 3.600</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Acompanhamento técnico da supressão vegetal (AUC)</strong></td>
+                      <td>NA</td>
+                      <td>NA</td>
+                      <td>R$ 9.280,00</td>
+                      <td><strong>R$ 7.800</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Assessoria, consultoria ambiental e organização documental para LAO</strong></td>
+                      <td>NA</td>
+                      <td>NA</td>
+                      <td>NA</td>
+                      <td><strong>R$ 200/h</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="muted" style="margin-top:10px;">
+                Observação: valores e periodicidades devem ser aplicados conforme a dinâmica real da obra e os gatilhos de execução previstos nos programas.
+              </p>
+            </section>
+
+            <section class="card" id="condicoes" data-title="Condições">
+              <h2>8. Condições</h2>
+              <ul>
+                <li>Esta proposta tem validade de 15 dias.</li>
+                <li>Esta proposta não contempla elaboração de projetos, análises laboratoriais ou serviço não especificado.</li>
+                <li>Todos os documentos técnicos serão acompanhados das respectivas Anotações de Responsabilidade Técnica (ART).</li>
+                <li>Outras condições de pagamento poderão ser discutidas.</li>
+              </ul>
+            </section>
+
+            <section class="card" id="fundamentos" data-title="Principais fundamentos técnicos">
+              <h2>9. Principais fundamentos técnicos</h2>
+
+              <div class="highlight">
+                <div class="badge">Bloco de destaque • Fundamentos</div>
+                <h3>Principais fundamentos técnicos</h3>
+                <ul>
+                  <li><strong>Conformidade com licenças e condicionantes:</strong> execução vinculada à LAI 12290/2025, AUC e aos programas ambientais aplicáveis.</li>
+                  <li><strong>Rastreabilidade documental:</strong> evidências auditáveis (registros fotográficos, listas, relatórios, CTR/MTR, notas fiscais, ARTs, certificados e laudos quando aplicáveis).</li>
+                  <li><strong>Gestão do PGRCC:</strong> rotinas compatíveis com a Resolução CONAMA 307/2002 e diretrizes da PNRS, com comprovação de destinação ambientalmente adequada.</li>
+                  <li><strong>Gestão de riscos operacionais:</strong> controles preventivos e corretivos (erosão/pós-chuva, poeira/material particulado, ruído, supressão vegetal) com recomendações e plano de ação.</li>
+                  <li><strong>Preparação para LAO:</strong> organização padronizada do dossiê ambiental desde a obra, evitando retrabalho e reduzindo risco de exigências futuras.</li>
+                </ul>
+
+                <div class="divider"></div>
+                <p class="muted" style="margin:0;">
+                  Resultado esperado: previsibilidade, redução de passivo e manutenção contínua de conformidade, com documentação pronta para instrução e comprovação junto ao órgão ambiental.
+                </p>
+              </div>
+            </section>
+
+            <footer class="card" style="padding:14px 16px;">
+              <div class="foot">
+                <div>
+                  <strong style="color:var(--blue-dark);">VIVA Assessoria Ambiental</strong><br/>
+                  <span class="muted">Documento técnico de apresentação</span>
+                </div>
+                <div class="muted" style="text-align:right;">
+                  Edifício Seixas Business Tower • R. Dr. Nereu Ramos, 197 • Sala 1303 • Itajaí/SC<br/>
+                  viva@vivaassessoria.com • viva.assessoriaambiental
+                </div>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Export to PDF
+    document.getElementById('btnPdf').addEventListener('click', () => window.print());
+
+    // Scroll spy (TOC + topnav)
+    const sections = Array.from(document.querySelectorAll('section.card[id]'));
+    const tocLinks = Array.from(document.querySelectorAll('#toc a'));
+    const topLinks = Array.from(document.querySelectorAll('#topnav a'));
+
+    function setActive(id){
+      [...tocLinks, ...topLinks].forEach(a => {
+        const href = a.getAttribute('href');
+        const isActive = href === '#' + id;
+        a.classList.toggle('active', isActive);
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visible && visible.target && visible.target.id) {
+        setActive(visible.target.id);
+      }
+    }, {
+      root: null,
+      rootMargin: '-25% 0px -68% 0px',
+      threshold: [0.05, 0.1, 0.2, 0.35, 0.5, 0.7]
+    });
+
+    sections.forEach(s => observer.observe(s));
+
+    // Smooth fallback + close-to-native active state when clicking
+    function bindLinks(list){
+      list.forEach(a => {
+        a.addEventListener('click', (ev) => {
+          const href = a.getAttribute('href');
+          if (!href || !href.startsWith('#')) return;
+          const target = document.querySelector(href);
+          if (!target) return;
+          ev.preventDefault();
+          setActive(target.id);
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', href);
+        });
+      });
+    }
+    bindLinks(tocLinks);
+    bindLinks(topLinks);
+
+    // Initialize active based on hash or first section
+    const initial = location.hash ? location.hash.replace('#','') : (sections[0] ? sections[0].id : null);
+    if (initial) setActive(initial);
+  </script>
+</body>
+</html>
