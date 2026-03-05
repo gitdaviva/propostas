@@ -3,10 +3,162 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Resumo Estruturado | Parecer Técnico Ambiental | VIVA</title>
-  <meta name="description" content="Resumo estruturado do Parecer Técnico Ambiental – Análise de aderência do PRAD ao comando judicial."/>
-
+  <title>Proposta Comercial | LAP | VIVA</title>
+  <meta name="description" content="Proposta Comercial – Licença Ambiental Prévia (LAP): EAS, Estudo de Tráfego, Diagnóstico de Ruídos e Assessoria Técnica."/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="no-referrer">
   <style>
+  
+  .services-table{
+  background:#021B3A;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.15);
+  margin-bottom:16px;
+}
+
+.services-table table{
+  width:100%;
+  border-collapse:collapse;
+  color:white;
+}
+
+.services-table th{
+  text-align:left;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.5px;
+  color:#c7d4ea;
+  padding-bottom:10px;
+  border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.services-table td{
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  font-size:15px;
+}
+
+.services-table tr:last-child td{
+  border-bottom:none;
+}
+
+.services-table .unit{
+  color:#8fa6c9;
+  font-weight:500;
+}
+
+.services-table .integral{
+  font-weight:700;
+  font-size:16px;
+}
+
+.services-total{
+  background:#f6f8fb;
+  border:1px solid #d7dde6;
+  padding:14px 18px;
+  border-radius:12px;
+  font-size:14px;
+}
+  
+  /* Seção azul institucional */
+
+.coord-section{
+  background:#021B3A;
+  border-radius:18px;
+  padding:40px;
+  color:white;
+  margin-bottom:20px;
+}
+
+/* Layout */
+
+.coord-grid{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:40px;
+  align-items:start;
+}
+
+/* Coluna da foto */
+
+.coord-photo{
+  width:160px;
+  height:160px;
+  border-radius:24px;
+  object-fit:cover;
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+  margin-bottom:16px;
+}
+
+.coord-name{
+  margin:0;
+  font-size:18px;
+  font-weight:700;
+}
+
+.coord-role{
+  font-size:14px;
+  color:#c6d4f1;
+  margin-top:4px;
+  margin-bottom:12px;
+}
+
+/* badges */
+
+.coord-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.coord-badges span{
+  background:#0b3a75;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+/* texto */
+
+.coord-content h2{
+  color:white;
+}
+
+.coord-content ul{
+  color:#e6eefc;
+}
+
+/* divider branco */
+
+.divider-white{
+  background:rgba(255,255,255,0.25);
+  height:1px;
+  margin:18px 0;
+}
+
+/* responsivo */
+
+@media (max-width:900px){
+
+  .coord-grid{
+    grid-template-columns:1fr;
+  }
+
+  .coord-photo{
+    width:120px;
+    height:120px;
+  }
+
+}
+  
+  
+  .coord-section p,
+.coord-section li{
+  color: rgba(255,255,255,0.92);
+}
+  
     :root{
       --navy-950:#021B3A;
       --navy-900:#062a5e;
@@ -18,10 +170,9 @@
       --text-600:#566175;
       --white:#ffffff;
       --accent:#ffffff; /* destaque em header */
-      --active:#0ff;    /* NÃO usar cores chamativas? Mantemos discreto via borda e fundo */
+      --active:#0ff; /* NÃO usar cores chamativas? Mantemos discreto via borda e fundo */
       --shadow: 0 18px 45px rgba(2,27,58,.18);
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -31,10 +182,11 @@
       background:var(--ice-50);
       line-height:1.55;
     }
-
     /* Header / Nav */
     header{
-      position:sticky; top:0; z-index:50;
+      position:sticky;
+      top:0;
+      z-index:50;
       background:linear-gradient(180deg, var(--navy-950), var(--navy-900));
       color:var(--white);
       border-bottom:1px solid rgba(255,255,255,.12);
@@ -55,7 +207,8 @@
       min-width:260px;
     }
     .brand img{
-      width:44px; height:44px;
+      width:200px;
+      height:px;
       object-fit:contain;
       filter: drop-shadow(0 2px 10px rgba(0,0,0,.25));
       border-radius:6px;
@@ -74,7 +227,6 @@
       font-size:12px;
       opacity:.85;
     }
-
     nav{
       display:flex;
       flex-wrap:wrap;
@@ -103,7 +255,6 @@
       border-color:rgba(255,255,255,.30);
       box-shadow: 0 6px 18px rgba(0,0,0,.18);
     }
-
     .actions{
       display:flex;
       align-items:center;
@@ -130,6 +281,74 @@
       transform: translateY(-1px);
     }
     .btn:active{transform: translateY(0);}
+    /* Mobile menu (mantendo estética do modelo) */
+    .hamburger{
+      display:none;
+      align-items:center;
+      justify-content:center;
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.18);
+      cursor:pointer;
+      transition: background .15s ease, border-color .15s ease, transform .15s ease;
+    }
+    .hamburger:hover{
+      background:rgba(255,255,255,.16);
+      border-color:rgba(255,255,255,.28);
+      transform: translateY(-1px);
+    }
+    .hamburger:active{transform: translateY(0);}
+    .hamburger .bars{
+      width:18px;
+      height:12px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .hamburger .bars span{
+      height:2px;
+      background:rgba(255,255,255,.92);
+      border-radius:2px;
+      display:block;
+    }
+    .mobile-nav{
+      display:none;
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 22px 14px;
+    }
+    .mobile-drawer{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:16px;
+      padding:12px;
+      backdrop-filter: blur(4px);
+    }
+    .mobile-drawer a{
+      display:block;
+      text-decoration:none;
+      color:rgba(255,255,255,.92);
+      font-size:13px;
+      letter-spacing:.25px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      margin-bottom:8px;
+      transition: background .15s ease, border-color .15s ease, transform .15s ease;
+    }
+    .mobile-drawer a:hover{
+      background:rgba(255,255,255,.12);
+      border-color:rgba(255,255,255,.18);
+      transform: translateY(-1px);
+    }
+    .mobile-drawer a.active{
+      background:rgba(255,255,255,.18);
+      border-color:rgba(255,255,255,.30);
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    }
 
     /* Hero */
     .hero{
@@ -189,7 +408,6 @@
       font-size:12px;
       letter-spacing:.35px;
     }
-
     /* Layout */
     main{
       max-width:1200px;
@@ -202,7 +420,6 @@
       gap:22px;
       align-items:start;
     }
-
     /* Side index */
     aside{
       position:sticky;
@@ -258,7 +475,6 @@
       margin-top:4px;
       font-size:12px;
     }
-
     /* Cards */
     section.card{
       background:var(--white);
@@ -302,11 +518,9 @@
       font-size:14px;
       margin:0 0 12px;
     }
-
     ul, ol{margin:10px 0 10px 18px}
     li{margin:8px 0; color:var(--text-700); font-size:14px}
     .divider{height:1px;background:var(--line-200);margin:18px 0;}
-
     .highlight{
       border-left:6px solid var(--navy-900);
       background:linear-gradient(180deg, #ffffff, #fbfcfe);
@@ -314,7 +528,6 @@
       border-radius:14px;
       border:1px solid var(--line-200);
     }
-
     footer{
       background:var(--navy-950);
       color:rgba(255,255,255,.86);
@@ -334,58 +547,19 @@
 
     /* ====== PRINT / PDF (impressão otimizada) ====== */
     @media print{
-      @page{
-        size: A4;
-        margin: 14mm 12mm;
-      }
-      html, body{
-        background:#fff !important;
-      }
-      header, aside, .btn-print, nav, .actions{
-        display:none !important;
-      }
-      .hero{
-        background:#fff !important;
-        color:#000 !important;
-        padding: 0 0 10mm 0 !important;
-        border: none !important;
-      }
-      .hero h1{
-        font-size: 22pt !important;
-        color:#000 !important;
-      }
-      .hero p, .pill{
-        color:#111 !important;
-        border:1px solid #ddd !important;
-        background:#fff !important;
-      }
-      .hero-card{
-        border:1px solid #ddd !important;
-        background:#fff !important;
-        color:#111 !important;
-      }
-      main{
-        padding: 0 !important;
-        max-width: none !important;
-      }
-      .grid{
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
-      }
-      section.card{
-        border:1px solid #ddd !important;
-        box-shadow:none !important;
-        page-break-inside: avoid;
-      }
-      a{
-        color:#000 !important;
-        text-decoration:none !important;
-      }
-      footer{
-        background:#fff !important;
-        color:#111 !important;
-        border-top:1px solid #ddd !important;
-      }
+      @page{ size: A4; margin: 14mm 12mm; }
+      html, body{ background:#fff !important; }
+      header, aside, .btn-print, nav, .actions, .hamburger, .mobile-nav{ display:none !important; }
+      .hero{ background:#fff !important; color:#000 !important; padding: 0 0 10mm 0 !important; border: none !important; }
+      .hero h1{ font-size: 22pt !important; color:#000 !important; }
+      .hero p, .pill{ color:#111 !important; border:1px solid #ddd !important; background:#fff !important; }
+      .hero-card{ border:1px solid #ddd !important; background:#fff !important; color:#111 !important; }
+      main{ padding: 0 !important; max-width: none !important; }
+      .grid{ grid-template-columns: 1fr !important; gap: 0 !important; }
+      section.card{ border:1px solid #ddd !important; box-shadow:none !important; page-break-inside: avoid; }
+      h2, h3{ page-break-after: avoid; }
+      a{ color:#000 !important; text-decoration:none !important; }
+      footer{ background:#fff !important; color:#111 !important; border-top:1px solid #ddd !important; }
     }
 
     /* Responsive */
@@ -397,41 +571,59 @@
       .topbar{flex-direction:column; align-items:flex-start}
       nav{justify-content:flex-start}
       .actions{margin-left:0}
+      nav{display:none}
+      .hamburger{display:flex}
+      .mobile-nav{display:block}
     }
   </style>
 </head>
-
 <body>
-
 <header>
   <div class="topbar">
     <div class="brand">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJjAq1Am1YNrIjCL2db3B53K645Uf9N0z9Kw&s" alt="Logo VIVA">
+      <img src="https://static.wixstatic.com/media/9c5691_126c696fafa040d7bec9dd823b499482~mv2.png/v1/fill/w_212,h_62,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_viva_final_transparencia.png" alt="Logo VIVA">
       <div class="meta">
-        <div class="title">VIVA Assessoria Ambiental</div>
-        <div class="subtitle">Resumo estruturado · Parecer Técnico Ambiental</div>
+        
       </div>
     </div>
 
     <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
       <nav aria-label="Menu" id="topNav">
         <a href="#cabecalho" data-spy> Capa </a>
-        <a href="#identificacao" data-spy> 1. Identificação </a>
-        <a href="#finalidade" data-spy> 2. Finalidade </a>
-        <a href="#objetivos" data-spy> 3. Objetivos </a>
-        <a href="#sintese" data-spy> 4. Síntese </a>
-        <a href="#linha-tempo" data-spy> 4.1 Linha do tempo </a>
-        <a href="#analise-prad" data-spy> 5. Análise PRAD </a>
-        <a href="#analise-juridica" data-spy> 5.1 Comando judicial </a>
-        <a href="#conclusao" data-spy> 6. Conclusão </a>
-        <a href="#fundamentos" data-spy> Fundamentos </a>
+        <a href="#quem-somos" data-spy> 1. Quem Somos </a>
+        <a href="#clientes" data-spy> 2. Clientes </a>
+        <a href="#coordenacao" data-spy> 3. Coordenação Técnica </a>
+        <a href="#objeto" data-spy> 4. Objeto </a>
+        <a href="#criticidade" data-spy> 5. Grau de Criticidade </a>
+        <a href="#servicos" data-spy> 6. Descrição dos Serviços </a>
+        <a href="#investimento" data-spy> 7. Investimento </a>
+        <a href="#prazos" data-spy> 8. Prazos </a>
+        <a href="#condicoes" data-spy> 9. Condições Gerais </a>
       </nav>
 
       <div class="actions">
-        <button class="btn btn-print" id="printBtn" type="button" aria-label="Exportar para PDF">
-          Exportar para PDF
+        <button class="btn btn-print" id="printBtn" type="button" aria-label="Exportar para PDF">Exportar para PDF</button>
+        <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Abrir menu">
+          <div class="bars" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
         </button>
       </div>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav" aria-label="Menu móvel" style="display:none;">
+    <div class="mobile-drawer" role="navigation" aria-label="Links do menu móvel" id="mobileDrawer">
+      <a href="#cabecalho" data-spy> Capa </a>
+      <a href="#quem-somos" data-spy> 1. Quem Somos </a>
+      <a href="#clientes" data-spy> 2. Clientes </a>
+      <a href="#coordenacao" data-spy> 3. Coordenação Técnica </a>
+      <a href="#objeto" data-spy> 4. Objeto </a>
+      <a href="#criticidade" data-spy> 5. Grau de Criticidade </a>
+      <a href="#servicos" data-spy> 6. Descrição dos Serviços </a>
+      <a href="#investimento" data-spy> 7. Investimento </a>
+      <a href="#prazos" data-spy> 8. Prazos </a>
+      <a href="#condicoes" data-spy> 9. Condições Gerais </a>
     </div>
   </div>
 </header>
@@ -439,286 +631,448 @@
 <section class="hero" id="cabecalho">
   <div class="hero-inner">
     <div>
-      <h1>Resumo Estruturado do<br/>Parecer Técnico Ambiental</h1>
+      <h1>Proposta Comercial<br/>PV01/2026</h1>
       <p>
-        Documento de apresentação ao cliente contendo a síntese completa do parecer e seus principais fundamentos,
-        com foco na aderência do PRAD ao comando judicial e ao regime jurídico aplicável ao costão rochoso e às terras de marinha.
+        Licença Ambiental Prévia (LAP) — Estudo Ambiental Simplificado (EAS), Estudo de Tráfego Veicular, Diagnóstico de Ruídos e Assessoria Técnica.
+        <br/><br/>
+        Empreendimento: Condomínio residencial com aproximadamente <b>300 unidades habitacionais</b>.
       </p>
-      <div class="pill">Parecer técnico CV-163 · LPJ Participações · VIVA</div>
+      <div class="pill">Itajaí, 2026 · VIVA Assessoria Ambiental</div>
     </div>
 
     <div class="hero-card" role="note" aria-label="Dados-chave">
-      <div class="k">Processo</div>
-      <p class="v"><b>ACP nº 5023641-36.2011.4.04.7208/SC</b></p>
-      <div class="k">Objeto</div>
-      <p class="v"><b>Análise de aderência do PRAD ao comando judicial</b></p>
-      <div class="k">Referência</div>
-      <p class="v">Parecer técnico <b>CV-163</b> · <b>LPJ Participações</b></p>
+      <div class="k">Localização</div>
+      <p class="v"><b>A definir</b></p>
+
+      <div class="k">Cliente</div>
+      <p class="v"><b>A definir</b></p>
+
+      <div class="k">Escopo</div>
+      <p class="v">LAP (planejamento) · EAS · Tráfego · Ruídos · Assessoria</p>
     </div>
   </div>
 </section>
 
 <main>
   <div class="grid">
-
     <aside>
       <p class="aside-title">Índice do documento</p>
       <div class="toc" id="sideToc">
-        <a href="#identificacao" data-spy>1. Identificação
-          <small>Escopo, local e caracterização básica</small>
-        </a>
-        <a href="#finalidade" data-spy>2. Finalidade do Parecer
-          <small>Critério de confronto com sentença e perícia</small>
-        </a>
-        <a href="#objetivos" data-spy>3. Objetivos
-          <small>Checklist técnico do que o parecer verifica</small>
-        </a>
-        <a href="#sintese" data-spy>4. Síntese Processual
-          <small>Dano, regime jurídico e responsabilidade</small>
-        </a>
-        <a href="#linha-tempo" data-spy>4.1 Linha do Tempo
-          <small>Marcos fáticos e administrativos</small>
-        </a>
-        <a href="#analise-prad" data-spy>5. Análise Técnica do PRAD
-          <small>O que o PRAD propõe e o que não propõe</small>
-        </a>
-        <a href="#analise-juridica" data-spy>5.1 PRAD × Comando Judicial
-          <small>Requisitos da sentença e lacunas</small>
-        </a>
-        <a href="#conclusao" data-spy>6. Conclusão Técnica
-          <small>Por que não atende e o que seria necessário</small>
-        </a>
-        <a href="#fundamentos" data-spy>Fundamentos em destaque
-          <small>Pontos-chave técnico-jurídicos</small>
-        </a>
+        <a href="#quem-somos" data-spy>1. Quem Somos <small>Propósito, visão e missão</small></a>
+        <a href="#clientes" data-spy>2. Clientes <small>Principais grupos atendidos</small></a>
+        <a href="#coordenacao" data-spy>3. Coordenação Técnica <small>Responsável técnico e formação</small></a>
+        <a href="#objeto" data-spy>4. Objeto <small>Escopo e entregáveis do processo</small></a>
+        <a href="#criticidade" data-spy>5. Grau de Criticidade <small>Metodologia e classificação</small></a>
+        <a href="#servicos" data-spy>6. Descrição dos Serviços <small>EAS, Tráfego, Ruídos e Assessoria</small></a>
+        <a href="#investimento" data-spy>7. Investimento <small>Valores “De/Por” e total</small></a>
+        <a href="#prazos" data-spy>8. Prazos <small>Cronograma dos produtos</small></a>
+        <a href="#condicoes" data-spy>9. Condições Gerais <small>Validade, exclusões e ART</small></a>
       </div>
     </aside>
 
     <div>
+      <section class="card" id="quem-somos">
+        <h2>1. Quem Somos</h2>
 
-      <section class="card" id="identificacao">
-        <h2>1. Identificação</h2>
+        <h3>Propósito da VIVA</h3>
         <p class="text">
-          O parecer refere-se à análise técnica do <b>Plano de Recuperação de Área Degradada (PRAD)</b> apresentado no
-          cumprimento de sentença de <b>Ação Civil Pública</b> que reconheceu <b>dano ambiental decorrente da ocupação de costão rochoso
-          inserido em terreno de marinha</b>, localizado na <b>Rua 109, Canto da Praia, Itapema/SC</b>.
+          A VIVA existe para viabilizar empreendimentos. Acreditamos que o empreendedor não precisa saber de meio ambiente – e nem deveria se preocupar com isso.
+          Ele deve focar no que faz de melhor, enquanto nós garantimos que seu projeto esteja em conformidade ambiental, sem surpresas e sem burocracia imprevisível.
         </p>
         <p class="text">
-          A área objeto do litígio está inserida em <b>bem público federal (terreno de marinha e acrescidos)</b>, com ocupação edificada composta por
-          <b>edificação principal, trapiche fixo e estruturas náuticas associadas</b>.
+          Somos críticos à morosidade e à falta de compromisso dentro dos órgãos ambientais. O licenciamento ambiental não pode ser um processo arbitrário, sem previsibilidade e sem regras claras.
         </p>
+        <p class="text">
+          Desafiamos o status quo, porque sabemos que o desenvolvimento sustentável precisa ser equilibrado na prática e não apenas no discurso. Não acreditamos em ambientalismo indiscriminado.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3>Visão da VIVA</h3>
+        <p class="text">
+          Viabilizar <b>R$ 100 bilhões</b> de resultado aos nossos clientes até <b>2035</b>, promovendo o desenvolvimento sustentável e a transformação das cidades.
+        </p>
+
+        <h3>Missão da VIVA</h3>
+        <p class="text">
+          Ser o departamento de meio ambiente de quem viabiliza empreendimentos complexos, prestando uma consultoria ambiental de verdade, atenta à técnica e à legislação,
+          para viabilizar e acelerar projetos.
+        </p>
+      </section>
+
+      <section class="card" id="clientes">
+        <h2>2. Clientes</h2>
+        <p class="text">
+          A VIVA Assessoria Ambiental já prestou serviços para empresas e grupos empresariais como:
+        </p>
+        <ul>
+          <li>Procave</li>
+          <li>Plaenge</li>
+          <li>Grupo Koch</li>
+          <li>Vokkan</li>
+          <li>Lotisa</li>
+          <li>Brava Beach Group</li>
+          <li>Axia Vectra</li>
+          <li>Becker Loteamentos</li>
+          <li>CBA Empreendimentos</li>
+          <li>Mendes Sibara</li>
+          <li>CN Empreendimentos</li>
+          <li>BMAX Urbanismo Inteligente</li>
+          <li>Cotareal Investimentos</li>
+          <li>Engter</li>
+          <li>Grupo R. Gubert</li>
+          <li>Paraíso Gold Loteamentos</li>
+          <li>NF Empreendimentos</li>
+          <li>Sinduscon</li>
+          <li>Rodonaves</li>
+          <li>LMR Participações</li>
+          <li>Müse</li>
+          <li>Baltt</li>
+          <li>Criar Empreendimentos</li>
+          <li>Grupo D'Agostini</li>
+        </ul>
+      </section>
+
+<section class="coord-section" id="coordenacao">
+
+  <div class="coord-grid">
+
+    <div class="coord-photo-col">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRecHBHZvaAjJlJoFMd3rJaUfnEGDbgZU_cA&s"
+        alt="Victor Valente Silvestre"
+        class="coord-photo"
+      />
+
+      <h3 class="coord-name">Victor Valente Silvestre</h3>
+
+      <p class="coord-role">
+        Coordenação Técnica<br>
+        VIVA Assessoria Ambiental
+      </p>
+
+      <div class="coord-badges">
+        <span>UFSC</span>
+        <span>1.700+ Licenciamentos</span>
+        <span>15 anos de experiência</span>
+      </div>
+    </div>
+
+    <div class="coord-content">
+
+      <h2>3. Coordenação Técnica</h2>
+
+      <ul>
+        <li>Doutorando/Pesquisador em Avaliação de Impactos Ambientais – UFSC</li>
+        <li>Mestre em Engenharia Ambiental e Engenheiro Sanitarista e Ambiental – UFSC</li>
+        <li>Presidente da Câmara Técnica de Licenciamento Ambiental da ACESA (2018)</li>
+        <li>Ex-Superintendente do órgão ambiental de Itajaí</li>
+        <li>Ex-Diretor de Saneamento do SEMASA de Itajaí (2023)</li>
+        <li>Ex-Conselheiro do Conselho Estadual de Saneamento representando os 295 municípios catarinenses (2020)</li>
+        <li>Ex-Presidente do Colegiado de Saneamento da AMFRI</li>
+        <li>Responsável por mais de 1.700 processos de licenciamento ambiental</li>
+        <li>Criador do Método Estudo Ambiental Eficiente e professor de graduação e pós-graduação</li>
+      </ul>
+
+      <div class="divider divider-white"></div>
+
+      <h3>Formação Complementar</h3>
+
+      <ul>
+        <li>Ecole Polytechnique Fédérale de Lausanne – Suíça · Municipal Solid Waste Management in Developing Countries (2019)</li>
+        <li>University of North Carolina – EUA · Introduction to Environmental Law and Policy (2022)</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+      <section class="card" id="objeto">
+        <h2>4. Objeto</h2>
+        <p class="text">
+          O objeto da presente proposta é a prestação de serviços técnicos especializados para instrução do processo de <b>Licença Ambiental Prévia (LAP)</b> de um empreendimento residencial
+          composto por aproximadamente <b>300 unidades habitacionais</b>, caracterizado como condomínio residencial multifamiliar.
+        </p>
+        <p class="text">
+          O processo de licenciamento ambiental tem como objetivo avaliar a viabilidade ambiental do empreendimento na fase de planejamento, identificando potenciais impactos ambientais
+          associados à implantação e operação do projeto.
+        </p>
+        <p class="text">
+          Para a instrução do processo de licenciamento serão elaborados os estudos técnicos exigidos pelos órgãos ambientais competentes, incluindo:
+        </p>
+        <ul>
+          <li><b>Estudo Ambiental Simplificado (EAS)</b></li>
+          <li><b>Estudo de Tráfego Veicular</b></li>
+          <li><b>Diagnóstico de Ruídos</b></li>
+          <li><b>Assessoria técnica</b> para condução do processo de Licenciamento Ambiental Prévio</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <p class="text">
+          Os serviços contemplam a realização de diagnósticos ambientais, análise de impactos, elaboração de relatórios técnicos, produção de mapas temáticos, emissão de
+          <b>Anotações de Responsabilidade Técnica (ART)</b> e acompanhamento técnico do processo de licenciamento junto ao órgão ambiental competente.
+        </p>
+
         <div class="meta-row">
-          <span class="tag"><b>Processo:</b> ACP nº 5023641-36.2011.4.04.7208/SC</span>
-          <span class="tag"><b>Objeto:</b> Aderência do PRAD ao comando judicial</span>
-          <span class="tag"><b>Documento:</b> Parecer técnico CV-163 · LPJ Participações</span>
+          <span class="tag"><b>Proposta:</b> PV01/2026</span>
+          <span class="tag"><b>Fase:</b> Licença Ambiental Prévia (LAP)</span>
+          <span class="tag"><b>Empreendimento:</b> Condomínio residencial (≈ 300 UH)</span>
         </div>
       </section>
 
-      <section class="card" id="finalidade">
-        <h2>2. Finalidade do Parecer</h2>
+      <section class="card" id="criticidade">
+        <h2>5. Grau de Criticidade</h2>
         <p class="text">
-          A finalidade central do parecer é <b>verificar a conformidade técnico-ambiental e jurídico-ambiental do PRAD</b> apresentado,
-          confrontando-o com:
+          Para dimensionar os riscos e esforços necessários no processo de licenciamento ambiental, a VIVA aplica uma metodologia própria de avaliação de criticidade baseada em parâmetros objetivos.
         </p>
+        <h3>Critérios avaliados</h3>
         <ul>
-          <li>o conteúdo da sentença transitada em julgado;</li>
-          <li>as conclusões do laudo pericial judicial;</li>
-          <li>o regime jurídico aplicável ao costão rochoso e às terras de marinha.</li>
+          <li>Empreendimento de grande porte (sim)</li>
+          <li>Mais de 200 unidades habitacionais (sim)</li>
+          <li>Impactos urbanos relevantes (tráfego e ruído) (sim)</li>
+          <li>Necessidade de estudos ambientais para LAP (sim)</li>
+          <li>Inserção em área urbana em expansão (sim)</li>
         </ul>
         <p class="text">
-          Busca-se avaliar se o PRAD atende à exigência de <b>recuperação ambiental efetiva</b>, e não apenas <b>recomposição paisagística pontual</b>.
-        </p>
-      </section>
-
-      <section class="card" id="objetivos">
-        <h2>3. Objetivos</h2>
-        <p class="text">O parecer tem como objetivos específicos:</p>
-        <ul>
-          <li>Avaliar a compatibilidade da ocupação com o regime jurídico dos terrenos de marinha e do costão rochoso;</li>
-          <li>Analisar os achados da perícia judicial quanto ao dano ambiental;</li>
-          <li>Examinar a suficiência técnica do PRAD apresentado;</li>
-          <li>Verificar a necessidade de retirada das estruturas para viabilizar a recuperação ambiental;</li>
-          <li>Avaliar a consistência metodológica das medidas de recomposição propostas;</li>
-          <li>Emitir conclusão técnica quanto ao cumprimento ou não do comando judicial.</li>
-        </ul>
-      </section>
-
-      <section class="card" id="sintese">
-        <h2>4. Síntese Processual</h2>
-        <p class="text">
-          A sentença reconheceu a ocorrência de <b>dano ambiental significativo</b>, decorrente da implantação de edificação e estruturas náuticas
-          sobre costão rochoso, com ocupação aproximada de <b>895,33 m²</b> de área pública federal, incluindo avanço sobre o espelho d’água.
-        </p>
-        <p class="text">
-          Embora afastado o enquadramento como APP nos termos do Código Florestal, o Judiciário reconheceu <b>proteção jurídica específica</b>
-          do costão rochoso, com fundamento:
-        </p>
-        <ul>
-          <li>no Plano Nacional de Gerenciamento Costeiro (Lei nº 7.661/1988);</li>
-          <li>na legislação urbanística municipal, que classifica o local como área non aedificandi.</li>
-        </ul>
-        <p class="text">
-          A responsabilidade civil ambiental foi reconhecida como <b>objetiva</b>, sob a <b>teoria do risco integral</b>, sendo irrelevante a existência de licenças
-          municipais para afastar o dever de reparação.
-        </p>
-      </section>
-
-      <section class="card" id="linha-tempo">
-        <h2>4.1 Linha do Tempo dos Fatos Relevantes</h2>
-        <ul>
-          <li><b>2003:</b> Construção do trapiche fixo.</li>
-          <li><b>2005–2006:</b> Emissão e renovação de Licença Ambiental de Operação municipal.</li>
-          <li><b>2011:</b> Ajuizamento da Ação Civil Pública.</li>
-          <li><b>2015:</b> Renovação e ampliação da LAO, já com ACP em curso.</li>
-          <li><b>2018 e 2023:</b> Novas renovações administrativas da LAO.</li>
-          <li><b>Fase instrutória:</b> Realização de perícia judicial, confirmando:
-            <ul>
-              <li>ocupação integral de terreno de marinha;</li>
-              <li>inexistência de RIP;</li>
-              <li>comprometimento da regeneração natural do costão;</li>
-              <li>necessidade de retirada das estruturas.</li>
-            </ul>
-          </li>
-          <li><b>Trânsito em julgado:</b> Consolidação da obrigação de recuperação ambiental.</li>
-          <li><b>2024/2025:</b> Apresentação de PRAD delimitando apenas <b>15,83 m²</b> como área de recuperação.</li>
-          <li><b>2025/2026:</b> Análise técnica da aderência do PRAD ao comando judicial.</li>
-        </ul>
-      </section>
-
-      <section class="card" id="analise-prad">
-        <h2>5. Análise Técnica do PRAD</h2>
-
-        <h3>O PRAD propõe:</h3>
-        <ul>
-          <li>Área de intervenção de <b>15,83 m²</b>, sob alegação de corresponder à área non aedificandi;</li>
-          <li>Plantio de <b>seis mudas arbóreas nativas</b>;</li>
-          <li>Ausência de previsão de demolição da edificação, retirada do trapiche ou das estruturas náuticas;</li>
-          <li>Inexistência de plano técnico de desmobilização controlada;</li>
-          <li>Ausência de proposta de recuperação geomorfológica do costão.</li>
-        </ul>
-
-        <div class="divider"></div>
-
-        <h3>O parecer conclui que:</h3>
-        <ul>
-          <li>A área de recuperação é incompatível com a extensão do dano reconhecido judicialmente;</li>
-          <li>A fragmentação do ecossistema ignora que o costão rochoso é um sistema ecológico integrado;</li>
-          <li>A manutenção das estruturas impede fisicamente a regeneração natural;</li>
-          <li>Há inconsistência metodológica, com contradição quanto ao uso de fertilizantes e formicidas;</li>
-          <li>O PRAD não enfrenta a questão dominial, nem condiciona a recuperação à desocupação da área pública.</li>
-        </ul>
-      </section>
-
-      <section class="card" id="analise-juridica">
-        <h2>5.1 Análise do PRAD à Luz do Comando Judicial e do Enquadramento Jurídico-Urbanístico</h2>
-
-        <p class="text">A sentença judicial determinou expressamente que o PRAD deveria:</p>
-        <ul>
-          <li>Contemplar a recuperação do meio ambiente;</li>
-          <li>Prever a regularização perante a SPU;</li>
-          <li>Determinar a retirada das edificações que invadam a área non aedificandi, inclusive com demolição, se necessário.</li>
-        </ul>
-
-        <p class="text">
-          O parecer demonstra que o PRAD apresentado <b>não atende integralmente</b> a esses requisitos,
-          pois restringe indevidamente a área de recuperação e não prevê a retirada das estruturas incompatíveis.
+          Cada parâmetro adiciona <b>20 pontos</b>, resultando em uma pontuação máxima de <b>100 pontos</b>.
         </p>
 
         <div class="divider"></div>
 
-        <h3>5.1.1 Enquadramento Urbanístico Vigente à Época da Decisão Judicial</h3>
-        <p class="text">
-          À época da sentença (2017), a Lei Complementar Municipal nº 11/2002 classificava a área como
-          <b>ÁREA NON AEDIFICANDI – ZPP</b>, vedando edificação e priorizando a preservação ambiental,
-          inclusive em terras de marinha situadas em zona urbana.
-        </p>
-
-        <h3>5.1.2 Convergência entre Legislação Municipal, Laudo Pericial e Sentença</h3>
-        <p class="text">O parecer evidencia plena convergência entre:</p>
+        <h3>Classificação</h3>
         <ul>
-          <li>o laudo pericial judicial;</li>
-          <li>a legislação municipal vigente;</li>
-          <li>a sentença judicial.</li>
+          <li>Baixa criticidade: 0 – 39 pontos</li>
+          <li>Média criticidade: 40 – 79 pontos</li>
+          <li>Alta criticidade: 80 – 100 pontos</li>
+        </ul>
+        <p class="text">
+          O empreendimento em questão é classificado como de <b>ALTA CRITICIDADE</b>, demandando atenção especial na elaboração dos estudos e na condução do processo de licenciamento ambiental.
+        </p>
+      </section>
+
+      <section class="card" id="servicos">
+        <h2>6. Descrição dos Serviços</h2>
+
+        <h3>6.1 Estudo Ambiental Simplificado (EAS)</h3>
+        <p class="text">
+          O Estudo Ambiental Simplificado será elaborado com o objetivo de avaliar a viabilidade ambiental do empreendimento e subsidiar o processo de Licença Ambiental Prévia.
+        </p>
+        <p class="text">O estudo contemplará:</p>
+        <ul>
+          <li>caracterização detalhada do empreendimento</li>
+          <li>diagnóstico da área de influência direta</li>
+          <li>análise do uso e ocupação do solo</li>
+          <li>caracterização dos recursos hídricos</li>
+          <li>análise da cobertura vegetal</li>
+          <li>diagnóstico socioeconômico</li>
+          <li>identificação e avaliação de impactos ambientais</li>
+          <li>proposição de medidas mitigadoras e compensatórias</li>
+          <li>elaboração de mapas técnicos</li>
+          <li>elaboração do relatório ambiental</li>
+          <li>emissão de ART</li>
         </ul>
 
-        <p class="text">Todos reconhecem que:</p>
+        <div class="divider"></div>
+
+        <h3>6.2 Estudo de Tráfego Veicular</h3>
+        <p class="text">
+          O estudo de tráfego tem como objetivo avaliar os impactos do empreendimento no sistema viário da área de influência.
+        </p>
+        <p class="text">Serão realizadas as seguintes atividades:</p>
         <ul>
-          <li>a área é terreno de marinha;</li>
-          <li>o costão rochoso possui proteção jurídica específica;</li>
-          <li>a ocupação comprometeu a regeneração natural;</li>
-          <li>licenças municipais não afastam o dever de reparação integral.</li>
+          <li>levantamento das condições atuais de tráfego</li>
+          <li>contagem e classificação de veículos</li>
+          <li>estimativa de viagens geradas pelo empreendimento</li>
+          <li>análise do nível de serviço das vias</li>
+          <li>projeção de impactos na fase de implantação e operação</li>
+          <li>proposição de medidas mitigadoras</li>
+        </ul>
+        <p class="text">
+          A metodologia seguirá as diretrizes do <b>Manual de Estudos de Tráfego do DNIT</b>.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3>6.3 Diagnóstico de Ruídos</h3>
+        <p class="text">
+          O diagnóstico acústico visa avaliar os níveis de ruído na área de influência do empreendimento e identificar possíveis impactos associados à implantação e operação do projeto.
+        </p>
+        <p class="text">As atividades incluem:</p>
+        <ul>
+          <li>levantamento das condições acústicas da área</li>
+          <li>definição dos pontos de monitoramento</li>
+          <li>medições de níveis sonoros</li>
+          <li>análise conforme a <b>NBR 10151</b></li>
+          <li>avaliação dos impactos acústicos</li>
+          <li>proposição de medidas mitigadoras</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h3>6.4 Assessoria Técnica para Licença Ambiental Prévia</h3>
+        <p class="text">
+          Os serviços de assessoria técnica compreendem o acompanhamento completo do processo de licenciamento ambiental, incluindo:
+        </p>
+        <ul>
+          <li>reuniões técnicas com o cliente</li>
+          <li>definição de estratégias para o processo de licenciamento</li>
+          <li>análise de riscos do empreendimento</li>
+          <li>protocolo do processo de licenciamento</li>
+          <li>interlocução com o órgão ambiental</li>
+          <li>resposta a ofícios de complementação</li>
+          <li>acompanhamento da tramitação do processo</li>
+          <li>reuniões com órgãos ambientais</li>
+          <li>acompanhamento de eventuais vistorias</li>
+          <li>suporte técnico contínuo ao empreendedor</li>
         </ul>
       </section>
 
-      <section class="card" id="conclusao">
-        <h2>6. Conclusão Técnica</h2>
-        <p class="text">
-          Conclui-se que o PRAD não atende ao comando judicial nem assegura recuperação ambiental efetiva, em razão de:
-        </p>
-        <ul>
-          <li>limitação indevida da área de intervenção;</li>
-          <li>ausência de previsão de retirada das estruturas;</li>
-          <li>inexistência de plano de demolição ambientalmente controlada;</li>
-          <li>fragilidade metodológica da recomposição proposta.</li>
-        </ul>
+      <section class="card" id="investimento">
+        <h2>7. Investimento</h2>
+       
 
-        <p class="text">A recuperação adequada do costão exige:</p>
-        <ul>
-          <li>remoção integral das estruturas;</li>
-          <li>restauração geomorfológica do substrato;</li>
-          <li>restauração ecológica sistêmica;</li>
-          <li>monitoramento ambiental com indicadores objetivos.</li>
-        </ul>
+<div class="services-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Serviço</th>
+        <th>Valor unitário</th>
+        <th>Contratação integral</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Estudo Ambiental Simplificado (EAS)</strong></td>
+        <td class="unit">R$ 44.200</td>
+        <td class="integral">R$ 26.000</td>
+      </tr>
+      <tr>
+        <td><strong>Estudo de Tráfego Veicular</strong></td>
+        <td class="unit">R$ 8.330</td>
+        <td class="integral">R$ 4.900</td>
+      </tr>
+      <tr>
+        <td><strong>Diagnóstico de Ruídos</strong></td>
+        <td class="unit">R$ 6.460</td>
+        <td class="integral">R$ 3.800</td>
+      </tr>
+      <tr>
+        <td><strong>Assessoria técnica para LAP</strong></td>
+        <td class="unit">R$ 11.730</td>
+        <td class="integral">R$ 6.900</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-        <p class="text">Sem essas medidas, a recomposição proposta permanece meramente paisagística.</p>
+<div class="services-total">
+  Valor total na contratação integral:
+  <strong>De R$ 70.720 · Por R$ 41.600</strong>
+</div>
+        <div class="divider"></div>
+
+        <h3>Condições de Pagamento</h3>
+        <ul>
+          <li><b>30%</b> na contratação</li>
+          <li><b>70%</b> parcelado em até <b>12</b> parcelas mensais</li>
+          <li>Outras condições de pagamento poderão ser discutidas conforme necessidade do cliente.</li>
+        </ul>
       </section>
 
-      <section class="card" id="fundamentos">
-        <h2>PRINCIPAIS FUNDAMENTOS TÉCNICO-JURÍDICOS (DESTAQUE FINAL)</h2>
-        <div class="highlight">
-          <ul>
-            <li>Dano ambiental reconhecido judicialmente, com coisa julgada material.</li>
-            <li>Proteção jurídica específica do costão rochoso, ainda que fora do regime de APP do Código Florestal.</li>
-            <li>Área classificada como non aedificandi pela legislação municipal vigente à época da decisão e mantida após 2020.</li>
-            <li>Ocupação irregular de terreno de marinha, sem RIP e sem autorização da União.</li>
-            <li>Responsabilidade civil ambiental objetiva, fundada na teoria do risco integral.</li>
-            <li>Imprescindibilidade da retirada das estruturas para viabilizar a regeneração natural do ecossistema.</li>
-            <li>Inadequação técnica do PRAD, por não enfrentar a integralidade do dano nem o comando judicial.</li>
-          </ul>
+      <section class="card" id="prazos">
+        <h2>8. Prazos</h2>
+
+        <div class="meta-row">
+          <span class="tag"><b>Planejamento inicial:</b> 15 dias</span>
+          <span class="tag"><b>Assessoria técnica:</b> durante toda a tramitação</span>
         </div>
 
         <div class="divider"></div>
 
-        <p class="text"><b>Se quiser, posso transformar esse resumo em:</b></p>
+        <h3>Produção dos estudos</h3>
         <ul>
-          <li>nota técnica executiva para juntada em processo,</li>
-          <li>memorial técnico para sustentação, ou</li>
-          <li>quadro comparativo PRAD × comando judicial para uso estratégico.</li>
+          <li><b>Estudo Ambiental Simplificado (EAS):</b> 90 dias</li>
+          <li><b>Estudo de Tráfego:</b> 60 dias</li>
+          <li><b>Diagnóstico de Ruídos:</b> 60 dias</li>
         </ul>
+
+        <p class="text">
+          A assessoria técnica será realizada durante todo o período de tramitação do processo de licenciamento ambiental.
+        </p>
       </section>
 
+      <section class="card" id="condicoes">
+        <h2>9. Condições Gerais</h2>
+        <ul>
+          <li>Esta proposta tem validade de <b>15 dias</b>.</li>
+          <li>Esta proposta não contempla análises laboratoriais, projetos executivos ou quaisquer serviços não explicitamente descritos.</li>
+          <li>Todos os documentos técnicos serão acompanhados das respectivas <b>Anotações de Responsabilidade Técnica (ART)</b>.</li>
+          <li>Serviços adicionais eventualmente solicitados poderão ser orçados separadamente.</li>
+        </ul>
+      </section>
     </div>
   </div>
 </main>
 
 <footer>
   <div class="footer-inner">
-    <div><b>VIVA Assessoria Ambiental</b> · Documento de apresentação ao cliente</div>
-    <div>Resumo estruturado · Parecer CV-163 · ACP nº 5023641-36.2011.4.04.7208/SC</div>
+    <div><b>[v] VIVA Assessoria Ambiental</b> · Seixas Business Tower | Rua Doutor Nereu Ramos, 197 - Sala 1303 | Centro, Itajaí - Santa Catarina | viva@vivaassessoria.com </div>
+   
   </div>
 </footer>
 
 <script>
   // ===== Exportar para PDF (impressão do navegador) =====
   document.getElementById('printBtn').addEventListener('click', () => {
-    // Dica: no diálogo de impressão, selecione "Salvar como PDF"
     window.print();
+  });
+
+  // ===== Menu sanduíche (mobile) =====
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileNav = document.getElementById('mobileNav');
+
+  function isMobileView(){
+    return window.matchMedia('(max-width: 980px)').matches;
+  }
+
+  function syncMobileNavVisibility(){
+    if (!isMobileView()){
+      mobileNav.style.display = 'none';
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  hamburgerBtn.addEventListener('click', () => {
+    const isOpen = mobileNav.style.display === 'block';
+    mobileNav.style.display = isOpen ? 'none' : 'block';
+    hamburgerBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  window.addEventListener('resize', syncMobileNavVisibility);
+
+  // Fecha menu móvel ao clicar em um item
+  document.querySelectorAll('#mobileDrawer a[data-spy]').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileNav.style.display = 'none';
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    });
   });
 
   // ===== Scroll Spy (marca seção ativa no menu e no índice lateral) =====
   const sectionIds = [
-    'cabecalho','identificacao','finalidade','objetivos','sintese','linha-tempo',
-    'analise-prad','analise-juridica','conclusao','fundamentos'
+    'cabecalho',
+    'quem-somos',
+    'clientes',
+    'coordenacao',
+    'objeto',
+    'criticidade',
+    'servicos',
+    'investimento',
+    'prazos',
+    'condicoes'
   ];
 
   const sections = sectionIds
@@ -735,34 +1089,51 @@
     });
   }
 
-  // Ajusta o "ponto" onde a seção passa a ser considerada ativa (altura do header)
   const headerOffset = 110;
 
-  const observer = new IntersectionObserver((entries) => {
-    // entre as entradas visíveis, escolhe a que está mais "topo"
-    const visible = entries
-      .filter(e => e.isIntersecting)
-      .sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top);
+  let observer = null;
 
-    if (visible.length) {
-      setActive(visible[0].target.id);
+  if ('IntersectionObserver' in window){
+    observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+      if (visible.length) {
+        setActive(visible[0].target.id);
+      }
+    }, {
+      root: null,
+      rootMargin: `-${headerOffset}px 0px -70% 0px`,
+      threshold: [0.01, 0.15, 0.35]
+    });
+
+    sections.forEach(s => observer.observe(s));
+  } else {
+    // Fallback por scroll event
+    function onScrollFallback(){
+      const fromTop = window.scrollY + headerOffset + 8;
+      let currentId = sectionIds[0];
+      for (const id of sectionIds){
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.offsetTop <= fromTop) currentId = id;
+      }
+      setActive(currentId);
     }
-  }, {
-    root: null,
-    rootMargin: `-${headerOffset}px 0px -70% 0px`,
-    threshold: [0.01, 0.15, 0.35]
-  });
+    window.addEventListener('scroll', onScrollFallback, {passive:true});
+    window.addEventListener('load', onScrollFallback);
+  }
 
-  sections.forEach(s => observer.observe(s));
-
-  // fallback para casos raros: ao carregar, ativa pela URL ou primeira seção
+  // Ao carregar: ativa pela URL ou primeira seção
   window.addEventListener('load', () => {
     const hash = (location.hash || '').replace('#','');
     if (hash && sectionIds.includes(hash)) setActive(hash);
     else setActive('cabecalho');
+    syncMobileNavVisibility();
   });
 
-  // Quando o usuário clica no menu, já marca como ativo (sensação responsiva)
+  // Ao clicar no menu, já marca como ativo (sensação responsiva)
   navLinks.forEach(a => {
     a.addEventListener('click', () => {
       const id = (a.getAttribute('href') || '').replace('#','');
@@ -770,6 +1141,5 @@
     });
   });
 </script>
-
 </body>
-</html>
+</html>”
