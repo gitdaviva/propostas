@@ -1,0 +1,1001 @@
+<!doctype html> <html lang="pt-BR"> <head> <meta charset="utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <title>Proposta Comercial | EIV | VIVA</title> <meta name="description" content="Proposta Comercial – Instrução de Estudo de Impacto de Vizinhança (EIV): EPIV, REIV, Estudo de Tráfego Veicular, viabilidades técnicas e assessoria técnica."/> <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex"> <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex"> <meta name="referrer" content="no-referrer"> <style>
+
+.services-table{
+background:#021B3A;
+border-radius:16px;
+padding:18px;
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
+margin-bottom:16px;
+}
+
+.services-table table{
+width:100%;
+border-collapse:collapse;
+color:white;
+}
+
+.services-table th{
+text-align:left;
+font-size:13px;
+font-weight:600;
+letter-spacing:0.5px;
+color:#c7d4ea;
+padding-bottom:10px;
+border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.services-table td{
+padding:12px 0;
+border-bottom:1px solid rgba(255,255,255,0.08);
+font-size:15px;
+}
+
+.services-table tr:last-child td{
+border-bottom:none;
+}
+
+.services-table .unit{
+color:#8fa6c9;
+font-weight:500;
+}
+
+.services-table .integral{
+font-weight:700;
+font-size:16px;
+}
+
+.services-total{
+background:#f6f8fb;
+border:1px solid #d7dde6;
+padding:14px 18px;
+border-radius:12px;
+font-size:14px;
+}
+
+/* Seção azul institucional */
+
+.coord-section{
+background:#021B3A;
+border-radius:18px;
+padding:40px;
+color:white;
+margin-bottom:20px;
+}
+
+/* Layout */
+
+.coord-grid{
+display:grid;
+grid-template-columns:260px 1fr;
+gap:40px;
+align-items:start;
+}
+
+/* Coluna da foto */
+
+.coord-photo{
+width:160px;
+height:160px;
+border-radius:24px;
+object-fit:cover;
+box-shadow:0 15px 40px rgba(0,0,0,0.35);
+margin-bottom:16px;
+}
+
+.coord-name{
+margin:0;
+font-size:18px;
+font-weight:700;
+}
+
+.coord-role{
+font-size:14px;
+color:#c6d4f1;
+margin-top:4px;
+margin-bottom:12px;
+}
+
+/* badges */
+
+.coord-badges{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+
+.coord-badges span{
+background:#0b3a75;
+padding:6px 10px;
+border-radius:20px;
+font-size:12px;
+}
+
+/* texto */
+
+.coord-content h2{
+color:white;
+}
+
+.coord-content ul{
+color:#e6eefc;
+}
+
+/* divider branco */
+
+.divider-white{
+background:rgba(255,255,255,0.25);
+height:1px;
+margin:18px 0;
+}
+
+/* responsivo */
+
+@media (max-width:900px){
+
+.coord-grid{
+grid-template-columns:1fr;
+}
+
+.coord-photo{
+width:120px;
+height:120px;
+}
+
+}
+
+.coord-section p,
+.coord-section li{
+color: rgba(255,255,255,0.92);
+}
+
+:root{
+  --navy-950:#021B3A;
+  --navy-900:#062a5e;
+  --navy-800:#0b3a75;
+  --ice-50:#f6f8fb;
+  --line-200:#d7dde6;
+  --text-900:#0c1220;
+  --text-700:#3c4657;
+  --text-600:#566175;
+  --white:#ffffff;
+  --accent:#ffffff; /* destaque em header */
+  --active:#0ff; /* NÃO usar cores chamativas? Mantemos discreto via borda e fundo */
+  --shadow: 0 18px 45px rgba(2,27,58,.18);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Inter", "Helvetica Neue", sans-serif;
+  color:var(--text-900);
+  background:var(--ice-50);
+  line-height:1.55;
+}
+/* Header / Nav */
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:linear-gradient(180deg, var(--navy-950), var(--navy-900));
+  color:var(--white);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.topbar{
+  max-width:1200px;
+  margin:0 auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-width:260px;
+}
+.brand img{
+  width:200px;
+  height:px;
+  object-fit:contain;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,.25));
+  border-radius:6px;
+  background:rgba(255,255,255,.06);
+  padding:6px;
+}
+.brand .meta{display:flex; flex-direction:column; gap:3px;}
+.brand .meta .title{
+  font-weight:650;
+  letter-spacing:.6px;
+  font-size:12px;
+  text-transform:uppercase;
+  opacity:.9;
+}
+.brand .meta .subtitle{
+  font-size:12px;
+  opacity:.85;
+}
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:10px 12px;
+  align-items:center;
+}
+nav a{
+  color:rgba(255,255,255,.92);
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:.25px;
+  padding:8px 10px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+nav a:hover{
+  background:rgba(255,255,255,.12);
+  border-color:rgba(255,255,255,.18);
+  transform: translateY(-1px);
+}
+nav a.active{
+  background:rgba(255,255,255,.18);
+  border-color:rgba(255,255,255,.30);
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+.actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-left:10px;
+}
+.btn{
+  appearance:none;
+  border:none;
+  cursor:pointer;
+  font-size:13px;
+  letter-spacing:.25px;
+  border-radius:12px;
+  padding:10px 12px;
+  color:var(--white);
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.18);
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+  white-space:nowrap;
+}
+.btn:hover{
+  background:rgba(255,255,255,.16);
+  border-color:rgba(255,255,255,.28);
+  transform: translateY(-1px);
+}
+.btn:active{transform: translateY(0);}
+/* Mobile menu (mantendo estética do modelo) */
+.hamburger{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.18);
+  cursor:pointer;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.hamburger:hover{
+  background:rgba(255,255,255,.16);
+  border-color:rgba(255,255,255,.28);
+  transform: translateY(-1px);
+}
+.hamburger:active{transform: translateY(0);}
+.hamburger .bars{
+  width:18px;
+  height:12px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.hamburger .bars span{
+  height:2px;
+  background:rgba(255,255,255,.92);
+  border-radius:2px;
+  display:block;
+}
+.mobile-nav{
+  display:none;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 22px 14px;
+}
+.mobile-drawer{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:16px;
+  padding:12px;
+  backdrop-filter: blur(4px);
+}
+.mobile-drawer a{
+  display:block;
+  text-decoration:none;
+  color:rgba(255,255,255,.92);
+  font-size:13px;
+  letter-spacing:.25px;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  margin-bottom:8px;
+  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.mobile-drawer a:hover{
+  background:rgba(255,255,255,.12);
+  border-color:rgba(255,255,255,.18);
+  transform: translateY(-1px);
+}
+.mobile-drawer a.active{
+  background:rgba(255,255,255,.18);
+  border-color:rgba(255,255,255,.30);
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+
+/* Hero */
+.hero{
+  background:linear-gradient(135deg, var(--navy-900), var(--navy-800));
+  color:var(--white);
+  padding:70px 22px 44px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.hero-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:28px;
+  align-items:end;
+}
+.hero h1{
+  margin:0;
+  font-size:56px;
+  line-height:1.05;
+  letter-spacing:-.8px;
+}
+.hero p{
+  margin:18px 0 0;
+  font-size:16px;
+  color:rgba(255,255,255,.9);
+  max-width:760px;
+}
+.hero-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:16px;
+  padding:18px 18px 14px;
+  backdrop-filter: blur(4px);
+}
+.hero-card .k{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  opacity:.86;
+  margin-bottom:6px;
+}
+.hero-card .v{
+  font-size:14px;
+  opacity:.95;
+  margin:0 0 10px;
+}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:10px;
+  padding:9px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.16);
+  font-size:12px;
+  letter-spacing:.35px;
+}
+/* Layout */
+main{
+  max-width:1200px;
+  margin:0 auto;
+  padding:34px 22px 90px;
+}
+.grid{
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap:22px;
+  align-items:start;
+}
+/* Side index */
+aside{
+  position:sticky;
+  top:92px;
+  align-self:start;
+  background:var(--white);
+  border:1px solid var(--line-200);
+  border-radius:18px;
+  padding:16px;
+  box-shadow: 0 10px 30px rgba(10,16,32,.06);
+}
+.aside-title{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  color:var(--text-600);
+  margin:0 0 10px;
+}
+.toc a{
+  display:block;
+  text-decoration:none;
+  color:var(--text-700);
+  padding:9px 10px;
+  border-radius:12px;
+  border:1px solid transparent;
+  font-size:13px;
+  line-height:1.25;
+  margin-bottom:8px;
+  transition: background .12s ease, border-color .12s ease;
+}
+.toc a:hover{
+  border-color:var(--line-200);
+  background:var(--ice-50);
+}
+.toc a.active{
+  border-color:var(--navy-900);
+  background:linear-gradient(180deg, #ffffff, #f7f9fc);
+  position:relative;
+}
+.toc a.active::before{
+  content:"";
+  position:absolute;
+  left:-1px;
+  top:10px;
+  bottom:10px;
+  width:4px;
+  background:var(--navy-900);
+  border-radius:8px;
+}
+.toc small{
+  color:var(--text-600);
+  display:block;
+  margin-top:4px;
+  font-size:12px;
+}
+/* Cards */
+section.card{
+  background:var(--white);
+  border:1px solid var(--line-200);
+  border-radius:18px;
+  padding:26px 26px;
+  margin-bottom:18px;
+  box-shadow: 0 10px 30px rgba(10,16,32,.05);
+}
+.card h2{
+  margin:0 0 14px;
+  font-size:22px;
+  letter-spacing:-.2px;
+  color:var(--navy-900);
+}
+.card h3{
+  margin:18px 0 10px;
+  font-size:16px;
+  color:var(--navy-800);
+}
+.meta-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 14px;
+  margin:10px 0 2px;
+}
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 10px;
+  border-radius:999px;
+  background:var(--ice-50);
+  border:1px solid var(--line-200);
+  font-size:12px;
+  color:var(--text-700);
+}
+.tag b{color:var(--text-900)}
+.text{
+  color:var(--text-700);
+  font-size:14px;
+  margin:0 0 12px;
+}
+ul, ol{margin:10px 0 10px 18px}
+li{margin:8px 0; color:var(--text-700); font-size:14px}
+.divider{height:1px;background:var(--line-200);margin:18px 0;}
+.highlight{
+  border-left:6px solid var(--navy-900);
+  background:linear-gradient(180deg, #ffffff, #fbfcfe);
+  padding:18px 18px;
+  border-radius:14px;
+  border:1px solid var(--line-200);
+}
+footer{
+  background:var(--navy-950);
+  color:rgba(255,255,255,.86);
+  padding:34px 22px;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+.footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:10px 16px;
+  font-size:13px;
+}
+.footer-inner b{color:#fff}
+
+/* ====== PRINT / PDF (impressão otimizada) ====== */
+@media print{
+  @page{ size: A4; margin: 14mm 12mm; }
+  html, body{ background:#fff !important; }
+  header, aside, .btn-print, nav, .actions, .hamburger, .mobile-nav{ display:none !important; }
+  .hero{ background:#fff !important; color:#000 !important; padding: 0 0 10mm 0 !important; border: none !important; }
+  .hero h1{ font-size: 22pt !important; color:#000 !important; }
+  .hero p, .pill{ color:#111 !important; border:1px solid #ddd !important; background:#fff !important; }
+  .hero-card{ border:1px solid #ddd !important; background:#fff !important; color:#111 !important; }
+  main{ padding: 0 !important; max-width: none !important; }
+  .grid{ grid-template-columns: 1fr !important; gap: 0 !important; }
+  section.card{ border:1px solid #ddd !important; box-shadow:none !important; page-break-inside: avoid; }
+  h2, h3{ page-break-after: avoid; }
+  a{ color:#000 !important; text-decoration:none !important; }
+  footer{ background:#fff !important; color:#111 !important; border-top:1px solid #ddd !important; }
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero h1{font-size:40px}
+  .grid{grid-template-columns:1fr}
+  aside{position:relative; top:auto}
+  .topbar{flex-direction:column; align-items:flex-start}
+  nav{justify-content:flex-start}
+  .actions{margin-left:0}
+  nav{display:none}
+  .hamburger{display:flex}
+  .mobile-nav{display:block}
+}
+</style> </head> <body> <header> <div class="topbar"> <div class="brand"> <img src="https://static.wixstatic.com/media/9c5691_126c696fafa040d7bec9dd823b499482~mv2.png/v1/fill/w_212,h_62,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_viva_final_transparencia.png" alt="Logo VIVA"> <div class="meta"> 
+<div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+  <nav aria-label="Menu" id="topNav">
+    <a href="#cabecalho" data-spy> Capa </a>
+    <a href="#quem-somos" data-spy> 1. Quem Somos </a>
+    <a href="#clientes" data-spy> 2. Clientes </a>
+    <a href="#coordenacao" data-spy> 3. Coordenação Técnica </a>
+    <a href="#objeto" data-spy> 4. Objeto </a>
+    <a href="#criticidade" data-spy> 5. Grau de Criticidade </a>
+    <a href="#servicos" data-spy> 6. Descrição dos Serviços </a>
+    <a href="#investimento" data-spy> 7. Investimento </a>
+    <a href="#prazos" data-spy> 8. Prazos </a>
+    <a href="#condicoes" data-spy> 9. Condições Gerais </a>
+  </nav>
+
+  <div class="actions">
+    <button class="btn btn-print" id="printBtn" type="button" aria-label="Exportar para PDF">Exportar para PDF</button>
+    <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <div class="bars" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </button>
+  </div>
+</div>
+</div> <div class="mobile-nav" id="mobileNav" aria-label="Menu móvel" style="display:none;"> <div class="mobile-drawer" role="navigation" aria-label="Links do menu móvel" id="mobileDrawer"> <a href="#cabecalho" data-spy> Capa </a> <a href="#quem-somos" data-spy> 1. Quem Somos </a> <a href="#clientes" data-spy> 2. Clientes </a> <a href="#coordenacao" data-spy> 3. Coordenação Técnica </a> <a href="#objeto" data-spy> 4. Objeto </a> <a href="#criticidade" data-spy> 5. Grau de Criticidade </a> <a href="#servicos" data-spy> 6. Descrição dos Serviços </a> <a href="#investimento" data-spy> 7. Investimento </a> <a href="#prazos" data-spy> 8. Prazos </a> <a href="#condicoes" data-spy> 9. Condições Gerais </a> </div> </div> </header> <section class="hero" id="cabecalho"> <div class="hero-inner"> <div> <h1>Proposta Comercial<br/>PV27/2026</h1> <p> Instrução de <b>Estudo de Impacto de Vizinhança (EIV)</b> — Elaboração de <b>EPIV</b>, <b>REIV</b>, <b>Estudo de Tráfego Veicular</b>, obtenção de <b>viabilidades técnicas obrigatórias</b> e <b>assessoria técnica completa</b> para aprovação do processo. <br/><br/> Empreendimento: <b>Expansão da Marina Itajaí</b>. </p> <div class="pill">Itajaí, 2026 · VIVA Assessoria Ambiental</div> </div>
+<div class="hero-card" role="note" aria-label="Dados-chave">
+  <div class="k">Localização</div>
+  <p class="v"><b>Saco da Fazenda – Itajaí – SC</b></p>
+
+ 
+
+  <div class="k">Escopo</div>
+  <p class="v">EIV · EPIV · REIV · Tráfego · Viabilidades · Assessoria</p>
+
+  <div class="divider-white" style="margin:12px 0 10px;"></div>
+
+  <div class="k">Cliente</div>
+  <p class="v" style="margin-bottom:0;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqAMNmfuGckcARVT9Y9yoaOfHlECcTq2Y5MA&s" alt="Logo Marina Itajaí" style="width:120px; height:auto; object-fit:contain; border-radius:8px; background:rgba(255,255,255,.06); padding:6px; border:1px solid rgba(255,255,255,.14);">
+  </p>
+</div>
+</div> </section> <main> <div class="grid"> <aside> <p class="aside-title">Índice do documento</p> <div class="toc" id="sideToc"> <a href="#quem-somos" data-spy>1. Quem Somos <small>Propósito, visão e missão</small></a> <a href="#clientes" data-spy>2. Clientes <small>Principais grupos atendidos</small></a> <a href="#coordenacao" data-spy>3. Coordenação Técnica <small>Responsável técnico e formação</small></a> <a href="#objeto" data-spy>4. Objeto <small>Escopo e entregáveis do processo</small></a> <a href="#criticidade" data-spy>5. Grau de Criticidade <small>Metodologia e classificação</small></a> <a href="#servicos" data-spy>6. Descrição dos Serviços <small>Viabilidades, Tráfego, EPIV, REIV e Assessoria</small></a> <a href="#investimento" data-spy>7. Investimento <small>Valores “De/Por” e total</small></a> <a href="#prazos" data-spy>8. Prazos <small>Cronograma dos produtos</small></a> <a href="#condicoes" data-spy>9. Condições Gerais <small>Validade, exclusões e ART</small></a> </div> </aside>
+<div>
+  <section class="card" id="quem-somos">
+    <h2>1. Quem Somos</h2>
+
+    <h3>Propósito da VIVA</h3>
+    <p class="text">
+      A VIVA existe para viabilizar empreendimentos. Acreditamos que o empreendedor não precisa saber de meio ambiente – e nem deveria se preocupar com isso.
+      Ele deve focar no que faz de melhor, enquanto nós garantimos que seu projeto esteja em conformidade ambiental, sem surpresas e sem burocracia imprevisível.
+    </p>
+    <p class="text">
+      Somos críticos à morosidade e à falta de compromisso dentro dos órgãos ambientais. O licenciamento ambiental não pode ser um processo arbitrário, sem previsibilidade e sem regras claras.
+    </p>
+    <p class="text">
+      Desafiamos o status quo, porque sabemos que o desenvolvimento sustentável precisa ser equilibrado na prática e não apenas no discurso. Não acreditamos em ambientalismo indiscriminado.
+    </p>
+
+    <div class="divider"></div>
+
+    <h3>Visão da VIVA</h3>
+    <p class="text">
+      Viabilizar <b>R$ 100 bilhões</b> de resultado ao nossos clientes, até <b>2035</b>, promovendo o desenvolvimento sustentável e a transformação das cidades.
+    </p>
+
+    <h3>Missão da VIVA</h3>
+    <p class="text">
+      Ser o departamento de meio ambiente de quem viabiliza empreendimentos complexos, prestando uma consultoria ambiental de verdade, atenta à técnica e à legislação,
+      para viabilizar e acelerar projetos.
+    </p>
+  </section>
+
+  <section class="card" id="clientes">
+    <h2>2. Clientes</h2>
+    <p class="text">
+      A VIVA Assessoria Ambiental já prestou serviços para empresas e grupos empresariais como:
+    </p>
+    <ul>
+      <li>Procave</li>
+      <li>Plaenge</li>
+      <li>Grupo Koch</li>
+      <li>Vokkan</li>
+      <li>Lotisa</li>
+      <li>Brava Beach Group</li>
+      <li>Axia Vectra</li>
+      <li>Becker Loteamentos</li>
+      <li>CBA Empreendimentos</li>
+      <li>Mendes Sibara</li>
+      <li>CN Empreendimentos</li>
+      <li>BMAX Urbanismo Inteligente</li>
+      <li>Cotareal Investimentos</li>
+      <li>Engter</li>
+      <li>Grupo R. Gubert</li>
+      <li>Paraíso Gold Loteamentos</li>
+      <li>NF Empreendimentos</li>
+      <li>Sinduscon</li>
+      <li>Rodonaves</li>
+      <li>LMR Participações</li>
+      <li>Müse</li>
+      <li>Baltt</li>
+      <li>Criar Empreendimentos</li>
+      <li>Grupo D'Agostini</li>
+    </ul>
+  </section>
+
+  <section class="coord-section" id="coordenacao">
+    <div class="coord-grid">
+      <div class="coord-photo-col">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRecHBHZvaAjJlJoFMd3rJaUfnEGDbgZU_cA&s"
+          alt="Victor Valente Silvestre"
+          class="coord-photo"
+        />
+
+        <h3 class="coord-name">Victor Valente Silvestre</h3>
+
+        <p class="coord-role">
+          Coordenação Técnica<br>
+          VIVA Assessoria Ambiental
+        </p>
+
+        <div class="coord-badges">
+          <span>UFSC</span>
+          <span>1.700+ Licenciamentos</span>
+          <span>15 anos de experiência</span>
+        </div>
+      </div>
+
+      <div class="coord-content">
+        <h2>3. Coordenação Técnica</h2>
+
+        <ul>
+          <li>Doutorando/Pesquisador em Avaliação de Impactos Ambientais – UFSC</li>
+          <li>Mestre em Engenharia Ambiental e Engenheiro Sanitarista e Ambiental – UFSC</li>
+          <li>Presidente da Câmara Técnica de Licenciamento Ambiental da Associação Catarinense de Engenharia Sanitária e Ambiental</li>
+          <li>Ex-Superintendente do órgão ambiental de Itajaí</li>
+          <li>Ex-Diretor de Saneamento do SEMASA de Itajaí (2023)</li>
+          <li>Ex-Conselheiro do Conselho Estadual de Saneamento representando os 295 municípios catarinenses (2020)</li>
+          <li>Ex-Presidente do Colegiado de Saneamento da AMFRI</li>
+          <li>15 anos de experiência profissional em licenciamento ambiental, responsável por mais de 1.700 processos de licenciamento ambiental</li>
+          <li>Criador do Método Estudo Ambiental Eficiente e professor de graduação e pós-graduação</li>
+        </ul>
+
+        <div class="divider divider-white"></div>
+
+        <h3>Formação Complementar</h3>
+
+        <ul>
+          <li>Ecole Polytechnique Fédérale de Lausanne (Suíça) – Municipal Solid Waste Management in Developing Countries (2019)</li>
+          <li>University of North Carolina (EUA) – Introduction to Environmental Law and Policy (2022)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="objeto">
+    <h2>4. Objeto</h2>
+    <p class="text">
+      Esta proposta tem como objeto a prestação de serviços técnicos especializados para instrução completa do <b>Estudo de Impacto de Vizinhança (EIV)</b> referente ao processo de <b>expansão da Marina Itajaí</b>, localizada no <b>Saco da Fazenda</b>, município de <b>Itajaí – SC</b>.
+    </p>
+    <p class="text">
+      O trabalho envolve a elaboração dos estudos técnicos exigidos pela legislação urbanística municipal, especialmente conforme os requisitos estabelecidos na <b>Lei Complementar nº 414/2022</b>, que regulamenta o Estudo de Impacto de Vizinhanhança no município de Itajaí.
+    </p>
+    <p class="text">
+      A expansão da marina caracteriza-se como um empreendimento com potencial de geração de impactos urbanos relevantes, especialmente relacionados a:
+    </p>
+    <ul>
+      <li>mobilidade urbana e geração de tráfego</li>
+      <li>impactos na infraestrutura urbana</li>
+      <li>interação com a vizinhança imediata</li>
+      <li>uso e ocupação do solo</li>
+      <li>demanda por serviços públicos</li>
+    </ul>
+    <p class="text">
+      Nesse contexto, o escopo da VIVA inclui:
+    </p>
+    <ul>
+      <li>obtenção das viabilidades técnicas obrigatórias junto aos órgãos competentes</li>
+      <li>elaboração do Estudo Prévio de Impacto de Vizinhança (EPIV)</li>
+      <li>elaboração do Relatório de Impacto de Vizinhança (REIV)</li>
+      <li>elaboração de Estudo de Tráfego Veicular</li>
+      <li>prestação de assessoria técnica especializada durante todo o processo de análise do EIV</li>
+    </ul>
+    <p class="text">
+      O objetivo é instruir tecnicamente o processo administrativo de aprovação do empreendimento, garantindo conformidade técnica com as exigências legais e proporcionando maior previsibilidade na tramitação junto ao município.
+    </p>
+
+    <div class="meta-row">
+      <span class="tag"><b>Proposta:</b> PV27/2026</span>
+      <span class="tag"><b>Empreendimento:</b> Expansão da Marina Itajaí</span>
+      <span class="tag"><b>Local:</b> Saco da Fazenda (Itajaí/SC)</span>
+    </div>
+  </section>
+
+  <section class="card" id="criticidade">
+    <h2>5. Grau de Criticidade</h2>
+    <p class="text">
+      Considerando as características do empreendimento e sua localização estratégica na região do <b>Saco da Fazenda</b>, área com forte dinâmica urbana e turística, o processo apresenta elevado grau de criticidade, especialmente em função de:
+    </p>
+    <ul>
+      <li>grande fluxo urbano e turístico na região</li>
+      <li>geração potencial de tráfego veicular</li>
+      <li>interação com áreas sensíveis do ponto de vista ambiental e paisagístico</li>
+      <li>relevância urbana e visibilidade pública do empreendimento</li>
+    </ul>
+    <p class="text">
+      Dessa forma, a condução do processo exige abordagem técnica estruturada, articulação institucional e estudos técnicos consistentes para garantir segurança jurídica e previsibilidade no licenciamento.
+    </p>
+  </section>
+
+  <section class="card" id="servicos">
+    <h2>6. Descrição dos Serviços</h2>
+
+    <h3>6.1 Obtenção de Viabilidades Técnicas Obrigatórias</h3>
+    <p class="text">
+      Elaboração e condução dos pedidos de viabilidade técnica exigidos pelos órgãos públicos e concessionárias responsáveis pela infraestrutura urbana.
+    </p>
+    <p class="text">Atividades principais:</p>
+    <ul>
+      <li>elaboração da documentação técnica necessária</li>
+      <li>protocolo dos pedidos de viabilidade</li>
+      <li>acompanhamento dos processos administrativos</li>
+      <li>interlocução com concessionárias e órgãos públicos</li>
+      <li>obtenção das certidões e documentos exigidos para instrução do EIV</li>
+    </ul>
+    <p class="text">Entre as viabilidades previstas estão:</p>
+    <ul>
+      <li>viabilidade de abastecimento de água</li>
+      <li>viabilidade de coleta e tratamento de esgoto</li>
+      <li>viabilidade de drenagem urbana</li>
+      <li>viabilidade de gerenciamento de resíduos sólidos</li>
+      <li>certidão de alagamento/cota de inundação e deslizamento junto à Defesa Civil</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>6.2 Estudo de Tráfego Veicular</h3>
+    <p class="text">
+      O estudo de tráfego veicular visa analisar os impactos gerados pelo empreendimento nas vias ao redor, considerando o volume de tráfego e as condições atuais, além de propor medidas para mitigar esses impactos. As atividades listadas garantem uma avaliação completa e técnica da mobilidade local. A metodologia segue as diretrizes do Manual de Estudos de Tráfego do DNIT (2006), abordando:
+    </p>
+    <ul>
+      <li><b>Prognóstico do Tráfego:</b> Avaliação das condições atuais de tráfego, com projeções do aumento de fluxo causado pelo empreendimento, destacando os horários de pico.</li>
+      <li><b>Classificação do Nível de Tráfego:</b> Com base na contagem manual de veículos, o volume de tráfego foi calculado para identificar os níveis de serviço.</li>
+      <li><b>Volume de Tráfego e Variações:</b> Contagem e análise do volume de veículos/hora, com ênfase nas horas de pico e ajustes para categorias de veículos.</li>
+      <li><b>Velocidade de Fluxo Livre (VFL) e Velocidade Média de Viagem (VMV):</b> Cálculo da VFL considerando a largura da via e densidade de acessos, e da VMV ajustada pelo volume de tráfego.</li>
+      <li><b>Percentagem de Tempo Gasto Seguindo (PTGS) e Nível de Serviço:</b> Estimativa do tempo gasto pelos veículos em tráfego denso e classificação do nível de serviço da via.</li>
+      <li><b>Análise de Impacto do Empreendimento no Tráfego:</b> Projeção das viagens adicionais geradas pelo empreendimento, e análise do impacto no nível de serviço e identificação de eventuais mudanças significativas.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>6.3 Elaboração do Estudo Prévio de Impacto de Vizinhança (EPIV)</h3>
+    <p class="text">
+      Este EPIV será elaborado para avaliar e mitigar os impactos do empreendimento na vizinhança, conforme as exigências do Termo de Referência estabelecido pela Lei Complementar nº 414, de 08 de dezembro de 2022, que regulamenta o Estudo de Impacto de Vizinhança no município de Itajaí. As atividades a seguir foram definidas para garantir que todos os aspectos relevantes sejam abordados de forma objetiva e eficiente:
+    </p>
+    <ul>
+      <li><b>Identificação do Empreendimento e Localização:</b> Coleta e apresentação detalhada do nome fantasia, localização e coordenadas do empreendimento.</li>
+      <li><b>Análise da Consulta Prévia:</b> Obtenção e revisão da consulta prévia junto aos órgãos competentes, considerando restrições e orientações.</li>
+      <li><b>Descrição do Empreendimento:</b> Elaboração de uma descrição técnica, abrangendo área, altura, vagas de estacionamento, método construtivo, e estratégia de convivência com a vizinhança.</li>
+      <li><b>Delimitação da Área de Influência:</b> Proposta e mapeamento da área de influência direta e indireta, incluindo acessos, áreas de proteção, e sítios históricos.</li>
+      <li><b>Dimensionamento do Sistema Viário:</b> Análise do sistema viário existente e proposto, com identificação dos fluxos de circulação.</li>
+      <li><b>Descrição das Edificações Existentes:</b> Identificação e descrição dos usos e volumes das edificações já existentes no terreno.</li>
+      <li><b>Protocolo do EPIV</b></li>
+      <li><b>Expedição de ART/RRT</b></li>
+      <li><b>Equipe técnica multidisciplinar</b>, composta por Arquiteto, Engenheiro Civil, Engenheiro Ambiental, Biólogo e Advogado.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>6.4 Elaboração do Relatório de Impacto de Vizinhança (REIV)</h3>
+    <p class="text">
+      Este REIV será elaborado para avaliar e mitigar os impactos do empreendimento na vizinhança, conforme as exigências do Termo de Referência estabelecido pela Lei Complementar nº 414, de 08 de dezembro de 2022, que regulamenta o Estudo de Impacto de Vizinhança no município de Itajaí. As atividades a seguir foram definidas para garantir que todos os aspectos relevantes sejam abordados de forma objetiva e eficiente:
+    </p>
+    <ul>
+      <li><b>1. Identificação e Características do Empreendimento</b></li>
+      <li><b>2. Análise Técnica e Projetos Complementares:</b> Estimativa da produção de ruídos, calor, vibração, lixo, efluentes e radiações, especificando quantidade, qualidade e distribuição temporal.</li>
+      <li><b>3. Sistema Viário e Transporte:</b>
+        <ul>
+          <li><b>Análise do Sistema Viário:</b> Identificação e descrição do sistema viário existente, incluindo vias públicas, hierarquização, sentido de tráfego, transporte de massa e intervenções viárias.</li>
+          <li><b>Estimativa de Viagens Geradas:</b> Estimativa das viagens geradas e sua distribuição pelo sistema viário na fase de implantação e operação.</li>
+          <li><b>Localização dos Acessos:</b> Definição e mapeamento dos acessos de entrada e saída de veículos e pedestres, identificando tipos de veículos e áreas de circulação.</li>
+          <li><b>Identificação de Áreas Críticas:</b> Identificação de áreas de acumulação de veículos, bloqueios e circulação interna de veículos leves e pesados, incluindo áreas de embarque e desembarque.</li>
+        </ul>
+      </li>
+      <li><b>4. Rede de Infraestrutura e Sustentabilidade:</b>
+        <ul>
+          <li><b>Rede de Infraestrutura Urbana:</b> Descrição da demanda e capacidade de atendimento das redes de drenagem, abastecimento de água, esgoto, energia elétrica, telecomunicações e outros serviços urbanos.</li>
+          <li><b>Medidas de Sustentabilidade:</b> Proposição de medidas de sustentabilidade e tecnologias para uso racional de água, energia e geração de resíduos, durante a implantação e operação.</li>
+        </ul>
+      </li>
+      <li><b>5. Análise Socioeconômica e Demográfica:</b>
+        <ul>
+          <li><b>Geração de Emprego e Renda:</b> Estimativa do número de postos de trabalho gerados, remuneração média e procedência da mão de obra.</li>
+          <li><b>Caracterização Sociodemográfica:</b> Análise das características sociodemográficas da área de influência, incluindo população residente, faixa etária, sexo, estratificação social e formas de locomoção.</li>
+        </ul>
+      </li>
+      <li><b>6. Impactos na Infraestrutura Pública e Patrimônio Cultural:</b>
+        <ul>
+          <li><b>Equipamentos Públicos:</b> Avaliação da demanda por equipamentos públicos de uso comunitário, como educação, cultura, saúde, esportes e lazer, e sua capacidade de atendimento.</li>
+          <li><b>Patrimônio Cultural e Ambiental:</b> Identificação de bens de interesse cultural e áreas de relevante interesse ambiental, analisando o impacto sobre esses bens.</li>
+        </ul>
+      </li>
+      <li><b>7. Identificação e Avaliação de Impactos:</b>
+        <ul>
+          <li><b>Identificação de Impactos:</b> Avaliação dos impactos positivos e negativos durante a fase de implantação e operação, incluindo destino final do material resultante da movimentação de terra, entulho, fluxo de veículos e geração de ruídos, calor e vibração.</li>
+          <li><b>Compatibilidade com Infraestrutura:</b> Análise da compatibilidade do empreendimento com as redes de infraestrutura urbana e equipamentos públicos, identificando possíveis conflitos.</li>
+        </ul>
+      </li>
+      <li><b>8. Proposição de Soluções Mitigadoras e Compensatórias:</b>
+        <ul>
+          <li><b>Soluções para Impactos Identificados:</b> Proposição de soluções para prevenir, mitigar ou compensar os impactos, organizadas em matriz (tipo de impacto, medidas de prevenção, mitigação e compensação, com prazos para execução).</li>
+        </ul>
+      </li>
+      <li><b>Protocolo do REIV</b></li>
+      <li><b>Expedição de ART/RRT</b></li>
+      <li><b>Equipe técnica multidisciplinar</b>, composta por Arquiteto, Engenheiro Civil, Engenheiro Ambiental, Biólogo e Advogado.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>6.5 Assessoria e Consultoria Técnica no Processo de Aprovação</h3>
+    <p class="text">
+      Os serviços descritos a seguir compõem a assessoria completa para a tramitação e acompanhamento do Estudo de Impacto de Vizinhança (EIV). A assessoria inclui também a revisão de ofícios, contestação de condicionantes e o gerenciamento de prazos, garantindo que o processo de EIV seja conduzido de forma eficiente e em conformidade com as exigências legais:
+    </p>
+    <ul>
+      <li>Reuniões on-line ilimitadas com o cliente</li>
+      <li>Acompanhamento da tramitação do EIV (EPIV e REIV)</li>
+      <li>Contestação de exigências, se aplicável</li>
+      <li>Reuniões técnicas com órgãos públicos, quando necessário</li>
+      <li>Preparação e apoio à apresentação em Audiência Pública, se aplicável</li>
+      <li>Revisão e contestação de ofícios de complementação, quando necessário</li>
+      <li>Revisão e contestação de condicionantes, se cabível</li>
+      <li>Reuniões presenciais com o cliente, quando necessário</li>
+      <li>Saneamento de dúvidas via WhatsApp</li>
+      <li>Acompanhamento de vistorias e inspeções, se necessário</li>
+      <li>Interlocução com projetistas e demais profissionais envolvidos</li>
+      <li>Auxílio na comunicação e negociação com partes interessadas (comunidade, entidades e stakeholders), quando aplicável</li>
+      <li>Assessoria na preparação de relatórios de progresso do processo para investidores e stakeholders, quando solicitado</li>
+      <li>Interpretação e adequação às exigências técnicas dos órgãos competentes</li>
+      <li>Identificação de oportunidades para compensações urbanísticas e suporte técnico em instâncias participativas, quando aplicável</li>
+    </ul>
+  </section>
+
+  <section class="card" id="investimento">
+    <h2>7. Investimento</h2>
+
+    <div class="services-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Serviço</th>
+            <th>Valor unitário</th>
+            <th>Contratação integral</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>EIV – Obtenção de 5 viabilidades técnicas</strong></td>
+            <td class="unit">R$ 7.200</td>
+            <td class="integral">R$ 4.500</td>
+          </tr>
+          <tr>
+            <td><strong>EIV – Estudo de tráfego veicular</strong></td>
+            <td class="unit">R$ 10.160</td>
+            <td class="integral">R$ 6.350</td>
+          </tr>
+          <tr>
+            <td><strong>EIV – Estudo Prévio de Impacto de Vizinhança (EPIV)</strong></td>
+            <td class="unit">R$ 10.400</td>
+            <td class="integral">R$ 6.500</td>
+          </tr>
+          <tr>
+            <td><strong>EIV – Relatório de Impacto de Vizinhança (REIV)</strong></td>
+            <td class="unit">R$ 37.040</td>
+            <td class="integral">R$ 26.900</td>
+          </tr>
+          <tr>
+            <td><strong>EIV – Assessoria e consultoria técnica</strong></td>
+            <td class="unit">R$ 11.570</td>
+            <td class="integral">R$ 8.050</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="services-total">
+      Valor total na contratação integral:
+      <strong>De R$ 76.370,00 · Por R$ 57.000,00</strong>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Condições de Pagamento</h3>
+    <ul>
+      <li><b>20%</b> de entrada +</li>
+      <li><b>15</b> vezes sem juros de <b>R$ 2.789,33</b></li>
+      <li><b>Entrada:</b> R$ 10.460,00</li>
+      <li><b>Parcelamento:</b> 15x de R$ 2.789,33</li>
+    </ul>
+  </section>
+
+  <section class="card" id="prazos">
+    <h2>8. Prazos</h2>
+
+    <div class="meta-row">
+      <span class="tag"><b>Planejamento inicial:</b> 15 dias</span>
+      <span class="tag"><b>Assessoria técnica:</b> durante toda a tramitação</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>Cronograma</h3>
+    <ul>
+      <li><b>Fase de Planejamento:</b> 15 dias</li>
+      <li><b>Obtenção das Viabilidades Técnicas:</b> 20 dias após a fase de planejamento</li>
+      <li><b>Elaboração do EPIV:</b> 45 dias após a fase de planejamento</li>
+      <li><b>Elaboração do REIV:</b> 60 dias após a fase de planejamento</li>
+    </ul>
+
+    <p class="text">
+      Os prazos podem ser ajustados em função de eventuais solicitações adicionais por parte dos órgãos públicos.
+    </p>
+  </section>
+
+  <section class="card" id="condicoes">
+    <h2>9. Condições Gerais</h2>
+    <ul>
+      <li>Esta proposta tem validade de <b>15 dias</b>.</li>
+      <li>Esta proposta não contempla serviços não explicitamente descritos nesta proposta.</li>
+      <li>Todos os documentos técnicos serão acompanhados das respectivas <b>Anotações de Responsabilidade Técnica (ART)</b> e/ou <b>RRT</b>, quando aplicável.</li>
+      <li>Serviços adicionais eventualmente solicitados pelo cliente ou exigidos por órgãos competentes poderão ser orçados separadamente.</li>
+    </ul>
+  </section>
+</div>
+</div> </main> <footer> <div class="footer-inner"> <div><b>[v] VIVA Assessoria Ambiental</b> · Seixas Business Tower | Rua Doutor Nereu Ramos, 197 - Sala 1303 | Centro, Itajaí - Santa Catarina | viva@vivaassessoria.com </div> </div> </footer> <script> // ===== Exportar para PDF (impressão do navegador) ===== document.getElementById('printBtn').addEventListener('click', () => { window.print(); }); // ===== Menu sanduíche (mobile) ===== const hamburgerBtn = document.getElementById('hamburgerBtn'); const mobileNav = document.getElementById('mobileNav'); function isMobileView(){ return window.matchMedia('(max-width: 980px)').matches; } function syncMobileNavVisibility(){ if (!isMobileView()){ mobileNav.style.display = 'none'; hamburgerBtn.setAttribute('aria-expanded', 'false'); } } hamburgerBtn.addEventListener('click', () => { const isOpen = mobileNav.style.display === 'block'; mobileNav.style.display = isOpen ? 'none' : 'block'; hamburgerBtn.setAttribute('aria-expanded', String(!isOpen)); }); window.addEventListener('resize', syncMobileNavVisibility); // Fecha menu móvel ao clicar em um item document.querySelectorAll('#mobileDrawer a[data-spy]').forEach(a => { a.addEventListener('click', () => { mobileNav.style.display = 'none'; hamburgerBtn.setAttribute('aria-expanded', 'false'); }); }); // ===== Scroll Spy (marca seção ativa no menu e no índice lateral) ===== const sectionIds = [ 'cabecalho', 'quem-somos', 'clientes', 'coordenacao', 'objeto', 'criticidade', 'servicos', 'investimento', 'prazos', 'condicoes' ]; const sections = sectionIds .map(id => document.getElementById(id)) .filter(Boolean); const navLinks = Array.from(document.querySelectorAll('a[data-spy]')); function setActive(id){ navLinks.forEach(a => { const href = a.getAttribute('href') || ''; const isActive = href === '#' + id; a.classList.toggle('active', isActive); }); } const headerOffset = 110; if ('IntersectionObserver' in window){ const observer = new IntersectionObserver((entries) => { const visible = entries .filter(e => e.isIntersecting) .sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top); if (visible.length) { setActive(visible[0].target.id); } }, { root: null, rootMargin: `-${headerOffset}px 0px -70% 0px`, threshold: [0.01, 0.15, 0.35] }); sections.forEach(s => observer.observe(s)); } else { // Fallback por scroll event function onScrollFallback(){ const fromTop = window.scrollY + headerOffset + 8; let currentId = sectionIds[0]; for (const id of sectionIds){ const el = document.getElementById(id); if (!el) continue; if (el.offsetTop <= fromTop) currentId = id; } setActive(currentId); } window.addEventListener('scroll', onScrollFallback, {passive:true}); window.addEventListener('load', onScrollFallback); } // Ao carregar: ativa pela URL ou primeira seção window.addEventListener('load', () => { const hash = (location.hash || '').replace('#',''); if (hash && sectionIds.includes(hash)) setActive(hash); else setActive('cabecalho'); syncMobileNavVisibility(); }); // Ao clicar no menu, já marca como ativo navLinks.forEach(a => { a.addEventListener('click', () => { const id = (a.getAttribute('href') || '').replace('#',''); if (id) setActive(id); }); }); </script> </body> </html>
